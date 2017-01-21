@@ -4,6 +4,20 @@
 \everymath{\displaystyle} %better layout
 \usepackage{listings} 
 
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+
+
+\newcommand{\de}[0]{\mathrm{d}}
+\newcommand{\dx}[0]{\de x}
+\newcommand{\dt}[0]{\de t}
+\newcommand{\ds}[0]{\de s}
+
+
+
+\newcommand{\todo}[0]{\colorbox{yellow}{\textcolor{red}{TODO}}}
+
 \lstset{language=TeX,
 				basicstyle=\small\ttfamily,	
 				frame=l}
@@ -13,8 +27,8 @@
 
 
 
-\newcommand{\code}[1]{\texttt {#1}}
-\newcommand{\bsl}{\textbackslash}
+%\newcommand{\code}[1]{\texttt {#1}}
+%\newcommand{\bsl}{\textbackslash}
 
 \setcounter{tocdepth}{4}
 
@@ -22,7 +36,9 @@
 
 \tableofcontents
 
-\section{Compilare}
+\newpage
+
+\section{Foglio 1}
 \input{source/pesando1.tex}
 
 
