@@ -1,3 +1,6 @@
 \contentsline {section}{\numberline {1}Foglio 1}{2}{section.1}
 \contentsline {subsection}{\numberline {1.1}1 - Osservatori uniformemente accelerati}{2}{subsection.1.1}
 \contentsline {paragraph}{Particella accelerata}{2}{section*.2}
+\contentsline {paragraph}{Achille e la lepre}{3}{section*.3}
+\contentsline {paragraph}{Tempo proprio}{3}{section*.4}
+\contentsline {paragraph}{$10^9$ anni-luce}{3}{section*.5}

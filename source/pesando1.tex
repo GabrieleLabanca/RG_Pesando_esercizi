@@ -15,11 +15,13 @@ Scrivo il boost a velocit\`a inversa dal sistema in movimento $\mathcal{I}$ al s
 \begin{equation} \label{accel_P}
 	a_T = \frac{\de u_T}{\dt} = \frac{(1-v^2)^{3/2}}{(1+uv)^3} a 
 \end{equation}
-Volendo trovare la velocit\`a della particella $P_0$, utilizzo l'equazione \autoref{accel_P} e la specializzo: la velocit\`a $u$ va posta nulla perch\`e considero la particella $P_0$, ferma in $\mathcal{I}$, e considero l'evoluzione temporale di $v(t_T)$, rispetto al sistema $\mathcal{T}$; la velocit\`a della particella rispetto a $\mathcal{T}$ \`e adesso $v$ e \( a = a_0 \):
-\[ a_T = \frac{\de v(t_T)}{\dt_T} = [1-v^2{t_T}]^{3/2} a_0 \]
-sostituisco v=cos(w) e poi? \todo
-[...]
-\[ v(t_T) = \frac{a_0 t_T}{\sqrt{a+(a_0t_T)^2}} \]
+Volendo trovare la velocit\`a della particella $P_0$, utilizzo l'equazione \ref{accel_P} e la specializzo: la velocit\`a $u$ va posta nulla perch\`e considero la particella $P_0$, ferma in $\mathcal{I}$, e considero l'evoluzione temporale di $v(t_T)$, rispetto al sistema $\mathcal{T}$; la velocit\`a della particella rispetto a $\mathcal{T}$ \`e adesso $v$ e \( a = a_0 \):
+\[ a_T = \frac{\de v(t_T)}{\dt_T} = [1-v^2(t_T)]^{3/2} a_0 \]
+\[ a_0t_T = \int_0^{v(t_T)} \frac{\de v}{(1-v^2)^{3/2}} \]
+sostituisco $v=\sin(\theta)$
+\[ a_0t_T= \int_0^{\arcsin(v(t_T))} \frac{\de \theta}{\cos^2(\theta)} = \int \de\tan\theta = \tan(\arcsin(v(t_T))) \]
+\[ v(t_T) = \sin(\arctan(a_0t_T)) \]
+\[ v(t_T) = \frac{a_0 t_T}{\sqrt{1+(a_0t_T)^2}} \]
 
 Per trovare la legge oraria, considerando che \(x_T(0)=v_T(0)=0\),
 \[ \int_{x_T(0)}^{x_T(t_T)} \dx_T = \int_0^{t_T} \frac{a_0t_T}{\sqrt{a+(a_0t_T)^2}} \dt_T \]
@@ -29,5 +31,23 @@ Sostituendo prima \( y=a_0t_T \) e poi \( y = \sinh(z) \) si ottiene
 \[ = \frac{1}{a_0} [\cosh\sinh^{-1}(y) - \cosh\sinh^{-1}(y_0)] \]
 \[ = \frac{1}{a_0} [\cosh(\ln(y + \sqrt{1+y^2}) -1] \]
 \[ = \frac{y^2+y\sqrt{1+y^2}+1-y-\sqrt{1+y^2}}{a_0(y+\sqrt{1+y^2})} \]
-\[ = \frac{\sqrt{1+y^2}-1}{a_0} = \frac{\sqrt{1+(a_0t_T)^2}-1}{a_0} \]
+\[ = \frac{\sqrt{1+y^2}-1}{a_0} \]
+\begin{equation} \label{leggeoraria}
+	\frac{\sqrt{1+(a_0t_T)^2}-1}{a_0} 
+\end{equation}
+\todo limite di basse velocit\`a
 
+\paragraph {Achille e la lepre}
+Uguagliando c*t a xT dovrei trovare qualcosa, ma se metto c=1 si cancella tquadro e se lo tengo non so dove sbattere la testa.
+
+\paragraph {Tempo proprio}
+Con \(\de s^2 = -c^2\dt^2 + \dx^2 \):
+\[ ic\de\tau = \de s = ic\dt_T \sqrt(1*-v^2(t_T)) \]
+\[ \tau = \int_0^{t_T} \sqrt(1*-v^2(t)) \dt = \int \frac{1}{\sqrt{1+(a_0t)^2}} \dt \]
+Sostituendo \( a_0t = \cosh z \)
+\[ \tau = \int \frac {\de z}{a_0} = \frac{\sinh^{-1}(a_0t_T)}{a_0} = \frac{\ln({\sqrt{1+(a_0t_T)^2}+a_0t_T)}}{a_0}\]
+
+\paragraph {$10^9$ anni-luce}
+Per percorrere una distanza di $10^9 \mathrm{ly}$ con accelerazione da fermo di \(g=9.8m/s^2=1.030ly/y^2\), usando la formula \ref{leggeoraria}, occorrono
+\[ \sqrt{\frac{d}{c}^2 + 2\frac{d}{g}} \simeq 1.942\cdot10^9y \]
+cui corrisponde un tempo proprio \( \tau = 0.142\cdot10^9ly \).
