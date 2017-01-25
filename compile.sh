@@ -1,3 +1,4 @@
 # !/bin/bash
 
-pdflatex Labanca_Esercizi.tex
+pdflatex risoluzione.tex
+cp  risoluzione.pdf Labanca_Esercizi.pdf
