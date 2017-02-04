@@ -1,0 +1,19 @@
+\subsection{Proiezione stereografica}
+Per un cerchio, valgono le relazioni seguenti:
+\[ x_{N,S} = R \frac{\cos\theta}{1\mp\sin\theta} \]
+Nel caso di una sfera, in coordinate polari tale relazione varra' per il modulo rispetto alla latitudine; la longitudine dara' invece l'argomento. Riscrivendo in campo complesso:
+\[ z_{N,S} = \rho_{N,S} e^{i\varphi} \]
+con 
+\[ \begin{cases}
+	\rho_{N,S} = R \frac{\cos\theta}{1\mp\sin\theta} & \\
+	\varphi = \phi & \\
+   \end{cases}
+\]
+Usando queste relazioni, si trova facilmente che 
+\[ \rho_N = \frac{1}{\rho_S} \]
+Tale relazione \`e olomorfa in \( U_N \cap U_S \), cio\`e il piano complesso senza l'origine e l'infinito.
+Le coordinate $w_{N,S}$, ottenute proiettando sul piano tangente alla sfera nel polo opposto, hanno modulo doppio delle rispettive $z_{N,S}$:
+\[ w_{N,S} = 2z_{N,S} \]
+
+\subsection{Rotazioni}
+\[ L_z = -i\dpartial{}{\phi} = -i \dpartial{\varphi}{\phi}\dpartial{z}{\varphi}\dpartial{}{z} = z\dpartial{}{z} \]

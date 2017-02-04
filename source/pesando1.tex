@@ -93,6 +93,36 @@ Considero il sistema $\mathcal{I}$ in cui il razzo \`e fermo e i sistemi $\mathc
 
 
 
+\subsection{2 - Campo elettrico di una particella carica senza massa}
+\paragraph{Quadripotenziale}
+Considerando la gauge in cui le componenti spaziali di $A^\mu$ sono nulle (in quanto il campo magnetico prodotto da una particella ferma \`e nullo), $A^0$ puo' essere ricavato, a meno di costanti, considerando che la sua derivata \`e il campo elettrico, che sara\`a un vettore (D-1)-dimensionale. Per il teorema di Gauss,
+\[ \int_\Sigma \vec{E}\cdot\vec{\Sigma} = \frac{\rho}{\epsilon_0} \]
+\[ =  (cost) \cdot \frac{r^{D-1}}{r^k}\Omega \]
+E siccome la dipendenza da r deve cancellarsi \( E_i = \frac{\Gamma(\frac{D-1}{2})}{2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-2}} \), quindi
+\[ A = (-\frac{\Gamma(\frac{D-1}{2})}{(D-1)2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-1}},\vec{0}) \]
+\paragraph{Tensore elettromagnetico}
+Le componenti non nulle del tensore $F_{\mu\nu}$ sono le $F_{i0}=-F_{0i}=E_i$.
+
+\paragraph{Coordinate cono-luce}
+Il cambio di coordinate \`e
+\[ \Upsilon_\xi^\mu = 
+\begin{pmatrix}
+	1/\sqrt{2} & 1/\sqrt{2}  \\
+	1/\sqrt{2} & -1/\sqrt{2} \\
+\end{pmatrix} 
+\]
+e il tensore elettromagnetico trasforma nel modo seguente:
+\[ \tilde{F}_{\xi\varsigma} = \Upsilon_\xi^\mu \Upsilon_\varsigma^\nu F_{\mu\nu} = 
+\begin{pmatrix}
+	0    & E_1 \\
+	-E_1 & 0   \\
+\end{pmatrix}
+\]
+
+Se cambio la velocit\`a:
+\[ x^{\pm} = \gamma(1-\beta) x^{\pm} = \sqrt{\frac{1-\beta}{1+\beta}} \]
+
+
 
 
 

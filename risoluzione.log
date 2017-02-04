@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.1.19)  25 JAN 2017 19:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.1.19)  4 FEB 2017 13:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -597,23 +597,23 @@ Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 ) (./risoluzione.aux)
 \openout1 = `risoluzione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 \c@lstlisting=\count118
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 36.
+Package hyperref Info: Link coloring OFF on input line 38.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -623,9 +623,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count119
 )
-LaTeX Info: Redefining \ref on input line 36.
-LaTeX Info: Redefining \pageref on input line 36.
-LaTeX Info: Redefining \nameref on input line 36.
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+LaTeX Info: Redefining \nameref on input line 38.
 
 (./risoluzione.out) (./risoluzione.out)
 \@outlinefile=\write3
@@ -670,40 +670,46 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 52.
 
-[3])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
+[3]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 98.
+
+[4]) (./source/pesando2.tex [5])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 60.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
  (./risoluzione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 60.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 60.
 Package rerunfilecheck Info: File `risoluzione.out' has not changed.
-(rerunfilecheck)             Checksum: D0DDCEBB05B9C62BE7065CAE02CD420B;527.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
+(rerunfilecheck)             Checksum: 8231EE6087239C94B001A6FFC4349D47;1078.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
  ) 
 Here is how much of TeX's memory you used:
- 7619 strings out of 493013
- 106512 string characters out of 6139317
- 240359 words of memory out of 5000000
- 11082 multiletter control sequences out of 15000+600000
+ 7642 strings out of 493013
+ 106788 string characters out of 6139317
+ 240385 words of memory out of 5000000
+ 11092 multiletter control sequences out of 15000+600000
  5612 words of font info for 21 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,7n,67p,439b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
- </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmsy7.pk> </home/gab
-riele/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr5.600pk> </home/gabriele/
-.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi5.600pk> </usr/share/texmf-dis
-t/fonts/pk/ljfour/public/cm/dpi600/cmmi7.pk> </usr/share/texmf-dist/fonts/pk/lj
-four/public/cm/dpi600/cmex10.pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/
-cm/dpi600/cmsy10.pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cm
-mi10.pk> </home/gabriele/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.60
-0pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr7.pk> </usr/sha
-re/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </usr/share/texmf-dist
-/fonts/pk/ljfour/public/cm/dpi600/cmbx10.pk> </home/gabriele/.texlive/texmf-var
-/fonts/pk/ljfour/public/cm/cmbx12.720pk>
-Output written on risoluzione.pdf (4 pages, 67363 bytes).
+ 40i,8n,67p,439b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/gabriele/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy5.600pk> </
+usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmsy7.pk> </home/gabriele
+/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr5.600pk> </home/gabriele/.texl
+ive/texmf-var/fonts/pk/ljfour/public/cm/cmmi5.600pk> </usr/share/texmf-dist/fon
+ts/pk/ljfour/public/cm/dpi600/cmmi7.pk> </usr/share/texmf-dist/fonts/pk/ljfour/
+public/cm/dpi600/cmex10.pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dp
+i600/cmsy10.pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi10.
+pk> </home/gabriele/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> 
+</usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr7.pk> </usr/share/te
+xmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </usr/share/texmf-dist/font
+s/pk/ljfour/public/cm/dpi600/cmbx10.pk> </home/gabriele/.texlive/texmf-var/font
+s/pk/ljfour/public/cm/cmbx12.720pk>
+Output written on risoluzione.pdf (6 pages, 91658 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
- 118 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 438 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
