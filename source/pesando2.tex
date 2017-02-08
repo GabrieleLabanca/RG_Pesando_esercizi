@@ -1,12 +1,12 @@
 \subsection{Proiezione stereografica}
 Per un cerchio, valgono le relazioni seguenti:
-\[ x_{N,S} = R \frac{\cos\theta}{1\mp\sin\theta} \]
+\[ x_{N,S} = R \frac{\sin\theta}{1\mp\cos\theta} \]
 Nel caso di una sfera, in coordinate polari tale relazione varra' per il modulo rispetto alla latitudine; la longitudine dara' invece l'argomento. Riscrivendo in campo complesso:
 \[ z_{N,S} = \rho_{N,S} e^{i\varphi} \]
 con 
 \[ \begin{cases}
-	\rho_{N,S} = R \frac{\cos\theta}{1\mp\sin\theta} & \\
-	\varphi = \phi & \\
+	\rho_{N,S} = R \frac{\sin\theta}{1\mp\cos\theta} & \\
+	\varphi_{N,S} = \phi & \\
    \end{cases}
 \]
 Usando queste relazioni, si trova facilmente che 
@@ -16,4 +16,25 @@ Le coordinate $w_{N,S}$, ottenute proiettando sul piano tangente alla sfera nel 
 \[ w_{N,S} = 2z_{N,S} \]
 
 \subsection{Rotazioni}
+I calcoli di questo paragrafo si intendono fatti con $z_N$. Le derivate si considerano per ora applicate a funzioni olomorfe.
 \[ L_z = -i\dpartial{}{\phi} = -i \dpartial{\varphi}{\phi}\dpartial{z}{\varphi}\dpartial{}{z} = z\dpartial{}{z} \]
+\[ L_\pm = \pm e^{\pm i\phi} (\dpartial{}{\theta} \pm i \cot\theta \dpartial{}{\phi} ) \]
+\[ = \pm e^{\pm i\varphi}Re^{i\varphi}  (-\frac{1}{1- \cos\theta} \mp  \cot\theta \frac{\sin\theta}{1-\cos\theta})\dpartial{}{z}  \]
+Siccome \( \rho_N = \frac{1+c}{1-c}\),
+\[ L_+ = -z^2\dpartial{}{z} , \;\;\;\;\;\;  L_- = \dpartial{}{z} \]
+\[ [L_+,L_-] = -z^2\dpartial{^2}{z^2} + 2z\dpartial{}{z} + z^2\dpartial{^2}{z^2} = 2L_z \]
+
+\subsection{Autofunzioni di $L_z$}
+\subsubsection{Funzioni non olomorfe}
+Cercando come autofunzione una funzione \( F_m(z_N,\bar{z_N}) = z_N^m f(z_N\bar{z_N}) \), che dipende anche dalla variabile complessa coniugata e non e' quindi olomorfa, e' necessario pensare le derivate su z come derivate sulle coordinate $(\theta,\phi)$, di cui poi si esegua un push-forward [\todo e' giusto?] sulle coordinate z. In formule,
+\[ \dpartial{}{\theta} \rightarrow \left.\dpartial{}{z}\right|^R ,\;\;\;\;\;\; \dpartial{}{\phi} \rightarrow \left.\dpartial{}{z}\right|^F \]
+dove
+\[ \left.\dpartial{g(z)}{z}\right|^{R,F} = lim_{|h|\rightarrow 0} \frac{g(z+|h|e^{i\phi_{R,F}}) - g(z)}{|h|e^{i\phi_{R,F}}} \]
+Con \( \phi_R = \varphi \) e \( \phi_F = \varphi+\pi/2 \).
+Quindi per funzioni non olomorfe
+\[ L_z = z\left.\dpartial{}{z}\right|^F \]
+\[ L_\pm = \pm e^{\pm i\varphi}Re^{i\varphi}  (-\frac{1}{1- \cos\theta}\left.\dpartial{}{z}\right|^R \mp  \cot\theta \frac{\sin\theta}{1-\cos\theta} \left.\dpartial{}{z}\right|^F)  \]
+\paragraph{}
+Fatte queste premesse,
+\[ L_z F_m = mz_N^{m-1}f(\rho^2) + z_N^m lim_{|h|\rightarrow 0} \frac{(z+|h|e^{i(\varphi+\pi/2)})(\bar{z}+|h|e^{-i(\varphi+\pi/2)})-z\bar{z}}{|h|e^{i(\varphi+\pi/2)}} \]
+\[= mz_N^{m-1}f(\rho^2) -\bar{z}+\bar{z} = mz_N^{m-1}f(\rho^2)\]
