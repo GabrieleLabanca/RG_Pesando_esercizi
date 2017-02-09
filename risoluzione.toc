@@ -15,5 +15,3 @@
 \contentsline {subsection}{\numberline {2.1}Proiezione stereografica}{5}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Rotazioni}{6}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Autofunzioni di $L_z$}{6}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Funzioni non olomorfe}{6}{subsubsection.2.3.1}
-\contentsline {paragraph}{}{7}{section*.12}

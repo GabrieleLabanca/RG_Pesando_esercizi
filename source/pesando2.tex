@@ -9,6 +9,8 @@ con
 	\varphi_{N,S} = \phi & \\
    \end{cases}
 \]
+
+
 Usando queste relazioni, si trova facilmente che 
 \[ \rho_N = \frac{1}{\rho_S} \]
 Tale relazione \`e olomorfa in \( U_N \cap U_S \), cio\`e il piano complesso senza l'origine e l'infinito.
@@ -25,7 +27,7 @@ Siccome \( \rho_N = \frac{1+c}{1-c}\),
 \[ [L_+,L_-] = -z^2\dpartial{^2}{z^2} + 2z\dpartial{}{z} + z^2\dpartial{^2}{z^2} = 2L_z \]
 
 \subsection{Autofunzioni di $L_z$}
-\subsubsection{Funzioni non olomorfe}
+\subsubsection*{Funzioni non olomorfe}
 Cercando come autofunzione una funzione \( F_m(z_N,\bar{z_N}) = z_N^m f(z_N\bar{z_N}) \), che dipende anche dalla variabile complessa coniugata e non e' quindi olomorfa, e' necessario pensare le derivate su z come derivate sulle coordinate $(\theta,\phi)$, di cui poi si esegua un push-forward [\todo e' giusto?] sulle coordinate z. In formule,
 \[ \dpartial{}{\theta} \rightarrow \left.\dpartial{}{z}\right|^R ,\;\;\;\;\;\; \dpartial{}{\phi} \rightarrow \left.\dpartial{}{z}\right|^F \]
 dove
@@ -33,8 +35,30 @@ dove
 Con \( \phi_R = \varphi \) e \( \phi_F = \varphi+\pi/2 \).
 Quindi per funzioni non olomorfe
 \[ L_z = z\left.\dpartial{}{z}\right|^F \]
-\[ L_\pm = \pm e^{\pm i\varphi}Re^{i\varphi}  (-\frac{1}{1- \cos\theta}\left.\dpartial{}{z}\right|^R \mp  \cot\theta \frac{\sin\theta}{1-\cos\theta} \left.\dpartial{}{z}\right|^F)  \]
-\paragraph{}
+e usando la relazione
+\[ \cos\theta = \frac{\rho^2 - 1}{\rho^2 +1} \rightarrow \frac{1}{1-\cos\theta} = \rho^2 +1\]
+si trova
+\begin{equation} \label{eq:L+-}
+ L_\pm = \mp \frac{z^2}{|z|^2}\frac{R}{2} \left[ (|z|^2+1)\left.\dpartial{}{z}\right|^R \pm (|z|^2-1)\left.\dpartial{}{z}\right|^F     \right]
+\end{equation}
+
+\subsubsection*{Autovalori di $F_m$}
 Fatte queste premesse,
-\[ L_z F_m = mz_N^{m-1}f(\rho^2) + z_N^m lim_{|h|\rightarrow 0} \frac{(z+|h|e^{i(\varphi+\pi/2)})(\bar{z}+|h|e^{-i(\varphi+\pi/2)})-z\bar{z}}{|h|e^{i(\varphi+\pi/2)}} \]
-\[= mz_N^{m-1}f(\rho^2) -\bar{z}+\bar{z} = mz_N^{m-1}f(\rho^2)\]
+\[ L_z F_m = \]
+\[mz_N^{m-1}f(\rho^2) + z_N^m \dpartial{f}{(\rho^2)} lim_{|h|\rightarrow 0} \frac{(z+|h|e^{i(\varphi+\pi/2)})(\bar{z}+|h|e^{-i(\varphi+\pi/2)})-z\bar{z}}{|h|e^{i(\varphi+\pi/2)}} \]
+\[= mz_N^{m-1}f(\rho^2) + \dpartial{f}{(\rho^2)}(-\bar{z}+\bar{z}) = mz_N^{m-1}f(\rho^2)\]
+
+\subsubsection*{Forma di $Y_l^l$}
+Poich\'e, come visto, \(\left.\dpartial{}{z}\right|^F f(\rho^2) = 0\),
+\[ L_+F_m = -z^2\dpartial{z^m}{z}f(\rho^2) - z^m \frac{z^2}{|z|^2} (|z|^2+1) \frac{R}{2} \left.\dpartial{z\bar{z}}{z}\right|^R \dpartial{f}{\rho^2} \]
+e, dato che \( \left.\dpartial{z\bar{z}}{z}\right|^R = 2\bar{z} \) (per la definizione data),
+\[ L_+F_m = -z^{m+1} \left[ mf + R(|z|^2+1) \dpartial{f}{\rho^2}   \right] \]
+Imponendo l'annullamento della parentesi si trova un'equazione differenziale che ha soluzione
+\[ f_m (\rho^2) = f_0\left(\frac{\rho^2 +1}{\rho_0^2+1}\right)^{-m/R} \]
+Definendo 
+\[ Y_l^m = z^m f_0\left(\frac{\rho^2 +1}{\rho_0^2+1}\right)^{-m/R}  \]
+si vede infine che 
+\[ L_+Y^m_l = 0 \iff m=l \]
+Da \ref{eq:L+-} si trova subito che 
+\[ L_-Y_l^l = -2lzY_l^l\]
+
