@@ -3,6 +3,7 @@ Per un cerchio, valgono le relazioni seguenti:
 \[ x_{N,S} = R \frac{\sin\theta}{1\mp\cos\theta} \]
 Nel caso di una sfera, in coordinate polari tale relazione varra' per il modulo rispetto alla latitudine; la longitudine dara' invece l'argomento. Riscrivendo in campo complesso:
 \[ z_{N,S} = \rho_{N,S} e^{i\varphi} \]
+\[ \bar{z}_{N,S} = \rho_{N,S} e^{-i\varphi} \]
 con 
 \[ \begin{cases}
 	\rho_{N,S} = R \frac{\sin\theta}{1\mp\cos\theta} & \\
@@ -11,54 +12,45 @@ con
 \]
 
 
-Usando queste relazioni, si trova facilmente che 
-\[ \rho_N = \frac{1}{\rho_S} \]
+Si definisce la funzione che lega le due carte nel modo seguente:
+\[ z_N = \frac{1}{z_S} \]
+\[ \bar{z}_N = \frac{1}{\bar{z}_S} \]
 Tale relazione \`e olomorfa in \( U_N \cap U_S \), cio\`e il piano complesso senza l'origine e l'infinito.
 Le coordinate $w_{N,S}$, ottenute proiettando sul piano tangente alla sfera nel polo opposto, hanno modulo doppio delle rispettive $z_{N,S}$:
 \[ w_{N,S} = 2z_{N,S} \]
 
 \subsection{Rotazioni}
-I calcoli di questo paragrafo si intendono fatti con $z_N$. Le derivate si considerano per ora applicate a funzioni olomorfe.
-\[ L_z = -i\dpartial{}{\phi} = -i \dpartial{\varphi}{\phi}\dpartial{z}{\varphi}\dpartial{}{z} = z\dpartial{}{z} \]
+I calcoli di questo paragrafo si intendono fatti con $z_N$. % Le derivate si considerano per ora applicate a funzioni olomorfe.
+\[ L_z = -i\dpartial{}{\phi} = -i \dpartial{\varphi}{\phi}(\dpartial{z}{\varphi}\dpartial{}{z} + \dpartial{\bar{z}}{\varphi}\dpartial{}{\bar{z}}) = z\dpartial{}{z} - \bar{z}\dpartial{}{\bar{z}}\]
 \[ L_\pm = \pm e^{\pm i\phi} (\dpartial{}{\theta} \pm i \cot\theta \dpartial{}{\phi} ) \]
-\[ = \pm e^{\pm i\varphi}Re^{i\varphi}  (-\frac{1}{1- \cos\theta} \mp  \cot\theta \frac{\sin\theta}{1-\cos\theta})\dpartial{}{z}  \]
-Siccome \( \rho_N = \frac{1+c}{1-c}\),
-\[ L_+ = -z^2\dpartial{}{z} , \;\;\;\;\;\;  L_- = \dpartial{}{z} \]
-\[ [L_+,L_-] = -z^2\dpartial{^2}{z^2} + 2z\dpartial{}{z} + z^2\dpartial{^2}{z^2} = 2L_z \]
+\[ = \pm e^{\pm i\varphi}Re^{i\varphi}  (-\frac{1}{1- \cos\theta} \mp  \cot\theta \frac{\sin\theta}{1-\cos\theta})\dpartial{}{z} \pm e^{\pm i\varphi}Re^{-i\varphi}  (-\frac{1}{1- \cos\theta} \pm  \cot\theta \frac{\sin\theta}{1-\cos\theta})\dpartial{}{\bar{z}} \]
 
-\subsection{Autofunzioni di $L_z$}
-\subsubsection*{Funzioni non olomorfe}
-Cercando come autofunzione una funzione \( F_m(z_N,\bar{z_N}) = z_N^m f(z_N\bar{z_N}) \), che dipende anche dalla variabile complessa coniugata e non e' quindi olomorfa, e' necessario pensare le derivate su z come derivate sulle coordinate $(\theta,\phi)$, di cui poi si esegua un push-forward [\todo e' giusto?] sulle coordinate z. In formule,
-\[ \dpartial{}{\theta} \rightarrow \left.\dpartial{}{z}\right|^R ,\;\;\;\;\;\; \dpartial{}{\phi} \rightarrow \left.\dpartial{}{z}\right|^F \]
-dove
-\[ \left.\dpartial{g(z)}{z}\right|^{R,F} = lim_{|h|\rightarrow 0} \frac{g(z+|h|e^{i\phi_{R,F}}) - g(z)}{|h|e^{i\phi_{R,F}}} \]
-Con \( \phi_R = \varphi \) e \( \phi_F = \varphi+\pi/2 \).
-Quindi per funzioni non olomorfe
-\[ L_z = z\left.\dpartial{}{z}\right|^F \]
-e usando la relazione
-\[ \cos\theta = \frac{\rho^2 - 1}{\rho^2 +1} \rightarrow \frac{1}{1-\cos\theta} = \rho^2 +1\]
-si trova
-\begin{equation} \label{eq:L+-}
- L_\pm = \mp \frac{z^2}{|z|^2}\frac{R}{2} \left[ (|z|^2+1)\left.\dpartial{}{z}\right|^R \pm (|z|^2-1)\left.\dpartial{}{z}\right|^F     \right]
-\end{equation}
+Siccome \( z\bar{z} = \frac{1+c}{1-c}\),
+\[ L_+ = -\frac{z^2}{R}\dpartial{}{z} -R\dpartial{}{\bar{z}} , \;\;\;\;\;\;  L_- = R\dpartial{}{z} + \frac{\bar{z}^2}{R}\dpartial{}{\bar{z}} \]
+Usando che \( \frac{\partial^2}{\partial z \partial \bar{z}} = \frac{\partial^2}{\partial \bar{z} \partial z}\) 
+\[ [L_+,L_-] = 2L_z \]
+
+
 
 \subsubsection*{Autovalori di $F_m$}
-Fatte queste premesse,
-\[ L_z F_m = \]
-\[mz_N^{m-1}f(\rho^2) + z_N^m \dpartial{f}{(\rho^2)} lim_{|h|\rightarrow 0} \frac{(z+|h|e^{i(\varphi+\pi/2)})(\bar{z}+|h|e^{-i(\varphi+\pi/2)})-z\bar{z}}{|h|e^{i(\varphi+\pi/2)}} \]
-\[= mz_N^{m-1}f(\rho^2) + \dpartial{f}{(\rho^2)}(-\bar{z}+\bar{z}) = mz_N^{m-1}f(\rho^2)\]
+Tenendo conto che 
+\[ L_z f(\rho) = (z\dpartial{\rho}{z} - \bar{z}\dpartial{\rho}{\bar{z}}) \dpartial{f}{\rho} = 0\]
+\`e immediato verificare che 
+\[ L_z F_m = L_z[z^m] f(\rho) + z^m L_z[f(\rho)] = m F_m\]
+
 
 \subsubsection*{Forma di $Y_l^l$}
-Poich\'e, come visto, \(\left.\dpartial{}{z}\right|^F f(\rho^2) = 0\),
-\[ L_+F_m = -z^2\dpartial{z^m}{z}f(\rho^2) - z^m \frac{z^2}{|z|^2} (|z|^2+1) \frac{R}{2} \left.\dpartial{z\bar{z}}{z}\right|^R \dpartial{f}{\rho^2} \]
-e, dato che \( \left.\dpartial{z\bar{z}}{z}\right|^R = 2\bar{z} \) (per la definizione data),
-\[ L_+F_m = -z^{m+1} \left[ mf + R(|z|^2+1) \dpartial{f}{\rho^2}   \right] \]
+\[ L_+ [f(z\bar{z})] = (-z^2\dpartial{\rho}{z} - \dpartial{\rho}{\bar{z}} ) \dpartial{f}{\rho} \]
+\[ = -\frac{z^{m+1}}{R} \left[ mf + (|z|^2+R^2) \dpartial{f}{\rho^2}   \right] \]
 Imponendo l'annullamento della parentesi si trova un'equazione differenziale che ha soluzione
-\[ f_m (\rho^2) = f_0\left(\frac{\rho^2 +1}{\rho_0^2+1}\right)^{-m/R} \]
+\[ f_m (\rho^2) = f_m(\rho^2 + R^2)^{-m} \]
 Definendo 
-\[ Y_l^m = z^m f_0\left(\frac{\rho^2 +1}{\rho_0^2+1}\right)^{-m/R}  \]
+\[ Y_l^m = z^m f_m(\rho^2 + R^2)^{-m}  \]
 si vede infine che 
 \[ L_+Y^m_l = 0 \iff m=l \]
-Da \ref{eq:L+-} si trova subito che 
-\[ L_-Y_l^l = -2lzY_l^l\]
+\[ L_-Y_l^l = (\frac{mR}{z} +\frac{\bar{z}}{R}) Y_l^l \]
+
+Nelle coordinate $(z_S, \bar{z}_S)$
+\[ Y_l^m = z_S^{-m}f_m((z_S\bar{z}_S)^{-1} + R^2)^{-m}  \]
+
 
