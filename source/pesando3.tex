@@ -1,0 +1,34 @@
+\subsection{Metrica bidimensionale}
+Si studia la metrica
+\[ g = \de s^2 = \frac{\epsilon \de x^2 + \de y^2}{y^2} \]
+con \( \epsilon = \pm 1\).
+\subsubsection*{Vettore di Killing}
+Considerando che la metrica non dipende dal modulo di x, ma solo da quello di y, si scrive immediatamente che per 
+\[ \vec{k} = \left( \begin{array}{c}  cost \\ 0 \end{array}  \right) \]
+\[ \mathcal{L}_{\vec{k}} g = 0 \]
+
+\subsubsection{Simboli di Christoffel}
+L'azione di una particella libera, in parametrizzazione affine, si scrive
+\[ S = \frac{1}{2} \int \de \lambda \frac{\epsilon \dot{x}^2 + \dot{y}^2}{y^2} \]
+Le variazioni $\delta x$ portano a 
+\[ \left(\frac{\epsilon \dot{x}}{y^2}\right)^\cdot = 0 \]
+\[ \ddot{x} - \frac{2\dot{x}\dot{y}}{y} = 0 \]
+mentre per $\delta y$ si ha
+\[ \frac{\epsilon \dot{x}^2 + \dot{y}^2}{y^3} + \left(\frac{\dot{y}}{y^2}\right)^\cdot =0 \]
+\[ \ddot{y} + \left(\frac{\epsilon \dot{x}}{y} - \frac{\dot{y}^2}{y} \right) =0 \]
+Confrontando le'equazioni con la condizione per le geodetiche
+\[ \ddot{x}^\mu + \Gamma^\mu_{\sigma\rho} \dot{x}^\sigma\dot{x}^\rho =0 \]
+si trovano
+\[ \Gamma^x_{xy} = \Gamma^x_{yx} = -\frac{2}{y} ; \;\;\; \Gamma^y_{xx} = \frac{\epsilon}{y} ; \;\;\; \Gamma^y_{yy} = - \frac{1}{y} \]
+Ovvero
+\begin{equation}
+	\begin{pmatrix}
+		\Gamma^x_{\; x} & \Gamma^x_{\; y} \\
+		\Gamma^y_{\; x} & \Gamma^y_{\; y} 
+	\end{pmatrix} = 
+	\begin{pmatrix}
+		-\frac{2\de y}{y} 	& -\frac{2\de x}{y}  \\
+		\frac{\epsilon\de x}{y} & -\frac{\de y}{y} 
+	\end{pmatrix}
+\end{equation}
+
