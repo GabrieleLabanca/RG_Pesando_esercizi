@@ -2,12 +2,13 @@
 Si studia la metrica
 \[ g = \de s^2 = \frac{\epsilon \de x^2 + \de y^2}{y^2} \]
 con \( \epsilon = \pm 1\).
-\subsubsection*{Vettore di Killing}
+
+\subsubsection*{Vettore di Killing} \todo
 Considerando che la metrica non dipende dal modulo di x, ma solo da quello di y, si scrive immediatamente che per 
 \[ \vec{k} = \left( \begin{array}{c}  cost \\ 0 \end{array}  \right) \]
 \[ \mathcal{L}_{\vec{k}} g = 0 \]
 
-\subsubsection{Simboli di Christoffel}
+\subsubsection*{Simboli di Christoffel}
 L'azione di una particella libera, in parametrizzazione affine, si scrive
 \[ S = \frac{1}{2} \int \de \lambda \frac{\epsilon \dot{x}^2 + \dot{y}^2}{y^2} \]
 Le variazioni $\delta x$ portano a 
@@ -19,7 +20,7 @@ mentre per $\delta y$ si ha
 Confrontando le'equazioni con la condizione per le geodetiche
 \[ \ddot{x}^\mu + \Gamma^\mu_{\sigma\rho} \dot{x}^\sigma\dot{x}^\rho =0 \]
 si trovano
-\[ \Gamma^x_{xy} = \Gamma^x_{yx} = -\frac{2}{y} ; \;\;\; \Gamma^y_{xx} = \frac{\epsilon}{y} ; \;\;\; \Gamma^y_{yy} = - \frac{1}{y} \]
+\[ \Gamma^x_{xy} = \Gamma^x_{yx} = -\frac{1}{y} ; \;\;\; \Gamma^y_{xx} = \frac{\epsilon}{y} ; \;\;\; \Gamma^y_{yy} = - \frac{1}{y} \]
 Ovvero
 \begin{equation}
 	\begin{pmatrix}
@@ -27,8 +28,114 @@ Ovvero
 		\Gamma^y_{\; x} & \Gamma^y_{\; y} 
 	\end{pmatrix} = 
 	\begin{pmatrix}
-		-\frac{2\de y}{y} 	& -\frac{2\de x}{y}  \\
+		-\frac{\de y}{y} 	& -\frac{\de x}{y}  \\
 		\frac{\epsilon\de x}{y} & -\frac{\de y}{y} 
 	\end{pmatrix}
 \end{equation}
+Con i simboli cos\`i trovati, si possono scrivere le seguenti equazioni
+\begin{equation} 
+	\begin{cases}
+		\nabla e_x = -\frac{\de y}{y} \otimes e_x + \frac{e \de x}{y} \otimes e_y & \\ 
+		\nabla e_y = -\frac{\de x}{y} \otimes e_x - \frac{\de y}{y} \otimes e_y & \\
+	\end{cases}
+\end{equation}
+
+\subsubsection*{Tensore curvatura}
+\[ R = \de\Gamma + \Gamma\wedge\Gamma \]
+\begin{equation}
+	(\de\Gamma)^i_j = \partial_\rho \Gamma_{\mu j}^i \dx^\rho \dx^\mu = \partial_y 
+		\begin{pmatrix}
+			0 & \frac{1}{y} \\
+			-\frac{\epsilon}{y} & 0 \\
+		\end{pmatrix}
+		\dx\wedge\de y
+\end{equation}
+\[ (\Gamma\wedge\Gamma)^i_j = \Gamma^i_j\wedge\Gamma^j_k \]
+e utilizzando il fatto che 
+\[ \dx^\mu\wedge\dx^\mu = 0 = \dx^\mu\wedge\dx^\nu + \dx^\nu\wedge\dx^\mu \]
+si trova che \( \Gamma\wedge\Gamma = 0 \).
+Ne segue che 
+\[ R = \frac{1}{y^2} 
+	\begin{pmatrix}
+		0 & -1 \\
+		\epsilon & 0 \\
+	\end{pmatrix}
+	\dx\wedge\de y
+\]
+Il tensore di Ricci \`e 
+\[ \mathrm{Ric}_{j\nu} = \delta^\mu_i R^i_{j\mu\nu} \]
+E come matrice
+\[ \mathrm{Ric} = 
+	\begin{pmatrix}
+		-\frac{\epsilon}{y^2} & 0 \\
+		0                     & -\frac{1}{y^2} \\
+	\end{pmatrix}
+\]
+Lo scalare di curvatura \`e definito come 
+\[ R = g^{ij} R_{ij} \]
+Si calcola $g^{ij}$ come inverso della metrica, da cui
+\[ ||g^{ij}|| = \mathrm{diag}(\frac{y^2}{\epsilon}, y^2) \]
+e $R=-2$.
+
+\subsubsection*{Zweibein}
+Scrivendo
+\[ V^x = \frac{\dx}{y} \;\;\;\;\; V^y = \frac{\de y}{y} \;\;\;\;\; \eta_{ij} = 
+	\begin{pmatrix}
+		\epsilon & 0 \\
+		0        & 1 \\
+	\end{pmatrix}
+\]
+si ha
+\[ \de s^2 = \eta_{ij} V^iV^j \]
+\newline
+Sapendo che 
+\[ 	\begin{cases}
+	\de V^x = \partial_y \left(\frac{1}{y}\right) \de y \wedge \dx & \\
+	\de V^y = \partial_x \left(\frac{1}{y}\right) \dx \wedge \de y = 0  & \\
+	\end{cases}
+\]
+e, considerando \(T^i = 0\), 
+\[ \de V^i = -\omega^i_j\wedge V^j \]
+(gli indici sono ora intesi nello spazio delle zweibein)
+si trova
+\[ \omega^y_x \wedge V^x = 0 \]
+\[ \omega^x_y \wedge V^y = \frac{1}{y^2} \de y \wedge \dx \]
+Considerando che, con la metrica piatta,
+\[ V_i = \eta_{ij} V^j = \begin{cases}
+	\epsilon V^i & \mathrm{se} \;\; i=x \\
+	V^i	     & \mathrm{se} \;\; i=y \\
+\end{cases} \]
+si trova che 
+\[ \omega^x_y \wedge V^y = -V^x\wedge V^y \]
+da cui 
+\[ \omega^x_y = -V^x \]
+e naturalmente
+\[ \omega^y_{\,x}= \epsilon\omega^{yx} = -\epsilon\omega^{xy} = -\epsilon\omega^x_{\,y} \]
+che verifica la condizione trovata per $\de V^y$.
+L'antisimmetria di $\omega^i_{\;j}$ si trasferisce a $R^i_{\;j}$, che avr\`a non nulli solo
+\[ R^x_{\;y} = \de \omega^i_{\;j} = -V^x\wedge V^y \;\;\;\;\; R^y_{\;x} = -\epsilon\de \omega^i_{\;j} = \epsilon V^x\wedge V^y \]
+Pertanto 
+\[ R = \begin{pmatrix}
+		0 & -1 \\
+		\epsilon & 0 \\
+	\end{pmatrix} V^x \wedge V^y \]
+Il tensore di Ricci ha componenti
+\[ \mathrm{Ric}_{ij} = 
+	\begin{pmatrix}
+		R^y_{x|yx} & R^x_{x|xy} \\
+		R^y_{y|yx} & R^x_{y|xy} \\
+	\end{pmatrix}
+	= \begin{pmatrix}
+		R^x_{\;y} & 0 \\
+		0 & R^x_{\;y} \\
+	\end{pmatrix}
+	= \begin{pmatrix}
+		-\epsilon & 0 \\
+		0 & -1 \\
+	\end{pmatrix}
+\]
+per cui lo scalare 
+\[ R = g^{ij} \mathrm{Ric}_{ij} = -\epsilon^2 -1=-2 \]
+\todo vettori tangenti; integrali primi
+
 
