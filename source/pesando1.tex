@@ -28,12 +28,9 @@ sostituisco $v=\sin(\theta)$
 Per trovare la legge oraria, considerando che \(x_T(0)=v_T(0)=0\),
 \[ \int_{x_T(0)}^{x_T(t_T)} \dx_T = \int_0^{t_T} \frac{a_0t_T}{\sqrt{a+(a_0t_T)^2}} \dt_T \]
 Sostituendo prima \( y=a_0t_T \) e poi \( y = \sinh(z) \) si ottiene
-\[ x_T(t_T) = \frac{1}{a_0} \int_{y_0}^y \frac{y}{\sqrt{1+y^2}} \de y \]
-\[ = \frac{1}{a_0} \int_{z_0}^z \sinh(z) \de z \]	
-\[ = \frac{1}{a_0} [\cosh\sinh^{-1}(y) - \cosh\sinh^{-1}(y_0)] \]
-\[ = \frac{1}{a_0} [\cosh(\ln(y + \sqrt{1+y^2}) -1] \]
-\[ = \frac{y^2+y\sqrt{1+y^2}+1-y-\sqrt{1+y^2}}{a_0(y+\sqrt{1+y^2})} \]
-\[ = \frac{\sqrt{1+y^2}-1}{a_0} \]
+\[ x_T(t_T) = \frac{1}{a_0} \int_{y_0}^y \frac{y}{\sqrt{1+y^2}} \de y = \frac{1}{a_0} \int_{z_0}^z \sinh(z) \de z \]
+\[ = \frac{1}{a_0} [\cosh\sinh^{-1}(y) - \cosh\sinh^{-1}(y_0)]  = \frac{1}{a_0} [\cosh(\ln(y + \sqrt{1+y^2}) -1]\]
+\[ = \frac{y^2+y\sqrt{1+y^2}+1-y-\sqrt{1+y^2}}{a_0(y+\sqrt{1+y^2})}  = \frac{\sqrt{1+y^2}-1}{a_0} \]
 \begin{equation} \label{leggeoraria}
 	x_T(t_T) = \frac{\sqrt{1+(a_0t_T)^2}-1}{a_0} 
 \end{equation}
@@ -96,8 +93,7 @@ Considero il sistema $\mathcal{I}$ in cui il razzo \`e fermo e i sistemi $\mathc
 \subsection{2 - Campo elettrico di una particella carica senza massa}
 \paragraph{Quadripotenziale}
 Considerando la gauge in cui le componenti spaziali di $A^\mu$ sono nulle (in quanto il campo magnetico prodotto da una particella ferma \`e nullo), $A^0$ puo' essere ricavato, a meno di costanti, considerando che la sua derivata \`e il campo elettrico, che sara\`a un vettore (D-1)-dimensionale. Per il teorema di Gauss,
-\[ \int_\Sigma \vec{E}\cdot\vec{\Sigma} = \frac{\rho}{\epsilon_0} \]
-\[ =  (cost) \cdot \frac{r^{D-1}}{r^k}\Omega \]
+\[ \int_\Sigma \vec{E}\cdot\vec{\Sigma} = \frac{\rho}{\epsilon_0} =  (cost) \cdot \frac{r^{D-1}}{r^k}\Omega \]
 E siccome la dipendenza da r deve cancellarsi \( E_i = \frac{\Gamma(\frac{D-1}{2})}{2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-2}} \), quindi
 \[ A = (-\frac{\Gamma(\frac{D-1}{2})}{(D-1)2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-1}},\vec{0}) \]
 \paragraph{Tensore elettromagnetico}

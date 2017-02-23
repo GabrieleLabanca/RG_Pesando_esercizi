@@ -136,6 +136,76 @@ Il tensore di Ricci ha componenti
 \]
 per cui lo scalare 
 \[ R = g^{ij} \mathrm{Ric}_{ij} = -\epsilon^2 -1=-2 \]
-\todo vettori tangenti; integrali primi
+
+\subsubsection*{Derivate covarianti}
+I vettori tangenti alle Zweibein sono quelli tali per cui
+\[ e_i(V^j) = \delta_i^j \]
+e sono pertanto
+\[ e_x = y \dx \;\;\;\;\; e_Y = y\de y \]
+Se ne calcolano le derivate covarianti, con connessione $\omega^i_{\;j}$:
+\[ \nabla e_x = \omega^y_{\;x} e_y = \epsilon e_y \otimes V^x \;\;\;\;\; \nabla e_y = \omega^x_{\;y} e_x =  e_x \otimes V^x \]
+
+
+
+\subsubsection*{Integrali primi}
+Gli integrali primi
+\[ \begin{cases}
+	p_x = \frac{\dot{x}}{y^2} & \\
+	\sigma = \frac{\epsilon\dot{x}^2 + \dot{y}^2}{y^2} & \\
+  \end{cases}
+\]
+danno le condizioni
+\[ \begin{cases}
+	\dot{x} = p_x y^2 & \\
+	\dot{y}^2 = (\sigma - \epsilon p_x^2 y^2 ) y^2 & \\
+  \end{cases}
+\]
+Si procede calcolando
+\[ \left(\frac{\de v}{\dx}\right)^2 = \left( \frac{\de v}{\de \lambda} \frac{\de \lambda}{\dx}  \right)^2 
+	= \left( \frac{2\dot{y}y}{\dot{x}} \right)^2 \]
+e, sostituendo le condizioni trovate con gli integrali primi, si ottiene
+\[ \left(\frac{\de v}{\dx}\right)^2 = \frac{4}{p_x^2} (\sigma - \epsilon\dot{x}^2 y^2 )\]
+
+Per integrare questa equazione,
+\[ \frac{\de v}{\dx} = \frac{2}{p_x}\sqrt{\sigma - \epsilon p_x^2 v} \;\;\; \Rightarrow \;\;\;
+	\frac{2\sqrt{\sigma}}{p_x} \dx = \frac{\de v}{ \sqrt{1 - \frac{\epsilon p_x^2 v}{\sigma}}} \]
+Si sostituisce al secondo membro 
+\[ v \rightarrow q = \frac{\epsilon p_x^2 v}{\sigma} \;\;\;\Rightarrow\;\;\; 
+	\frac{\sigma}{\epsilon p_x^2} \frac{\de q}{\sqrt{1-q}} \]
+Un'ulteriore sostituzione porta a 
+\[ q \rightarrow \theta=\arcsin{\sqrt{q}} \;\;\;\Rightarrow\;\;\;
+	\frac{2\sigma}{\epsilon p_x^2} \de{\cos\theta} \]
+Pertanto, tenendo conto che 
+\[ \cos\arcsin\sqrt{q} = \sqrt{1-q} \]
+l'integrazione porta a 
+\[ \frac{p_x\epsilon}{\sqrt{\sigma}}(x-x_0) = \sqrt{1-\frac{\epsilon p_x^2 v}{\sigma}} -c_0 \]
+che raccogliendo le costanti e riarrangiando porta a 
+\[ (p_x \epsilon x - K)^2 = \sigma - \epsilon p_x^2v \]
+Al variare di $\epsilon$ e $\sigma$, si ottengono i seguenti grafici:
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=\textwidth]{images/foglio3_neg_neg}
+	\caption{\(\epsilon=-1, \;\sigma=-1\)}
+ \label{figure:neg_neg}
+\end{figure}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=\textwidth]{images/foglio3_pos_neg}
+	\caption{\(\epsilon=-1, \;\sigma=+1\)}
+ \label{figure:pos_neg}
+\end{figure}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=\textwidth]{images/foglio3_pos_pos}
+	\caption{\(\epsilon=+1, \;\sigma=+1\)}
+ \label{figure:pos_pos}
+\end{figure}
+
+
+
+
+
+
+
 
 
