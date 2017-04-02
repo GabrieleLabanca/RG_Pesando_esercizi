@@ -143,7 +143,9 @@ I vettori tangenti alle Zweibein sono quelli tali per cui
 e sono pertanto
 \[ e_x = y \dx \;\;\;\;\; e_Y = y\de y \]
 Se ne calcolano le derivate covarianti, con connessione $\omega^i_{\;j}$:
-\[ \nabla e_x = \omega^y_{\;x} e_y = \epsilon e_y \otimes V^x \;\;\;\;\; \nabla e_y = \omega^x_{\;y} e_x =  e_x \otimes V^x \]
+\begin{equation} \label{eq:der_vettori}
+	\nabla e_x = \omega^y_{\;x} e_y = \epsilon e_y \otimes V^x \;\;\;\;\; \nabla e_y = \omega^x_{\;y} e_x =  e_x \otimes V^x 
+\end{equation}
 
 
 
@@ -185,27 +187,44 @@ Al variare di $\epsilon$ e $\sigma$, si ottengono i seguenti grafici:
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=\textwidth]{images/foglio3_neg_neg}
-	\caption{\(\epsilon=-1, \;\sigma=-1\)}
+	\caption*{\(\epsilon=-1, \;\sigma=-1\)}
  \label{figure:neg_neg}
 \end{figure}
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=\textwidth]{images/foglio3_pos_neg}
-	\caption{\(\epsilon=-1, \;\sigma=+1\)}
+	\caption*{\(\epsilon=-1, \;\sigma=+1\)}
  \label{figure:pos_neg}
 \end{figure}
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=\textwidth]{images/foglio3_pos_pos}
-	\caption{\(\epsilon=+1, \;\sigma=+1\)}
+	\caption*{\(\epsilon=+1, \;\sigma=+1\)}
  \label{figure:pos_pos}
 \end{figure}
 
+\subsubsection*{Derivata di un campo vettoriale}
+\[ \nabla X = (\nabla X^i) \partial_i + X^i \nabla\partial_i \]
+dove 
+\[ \nabla X^i = \partial_j X^i \dx^j = \de X^i \]
+e utilizzando la \ref{eq:der_vettori}
+\[ \nabla X = (\de X^x - X^yV^x) e_x + (\de X^y + \epsilon X^x V^x) e_y \]
 
 
-
-
-
-
-
-
+\subsubsection{Traiettoria circolare}
+Presa la traiettoria
+\[ \gamma(t) = (x_0 + r\cos\omega t, y_0 + r\sin\omega t) \]
+si considera il trasporto parallelo lungo essa, scrivibile come
+\[ \nabla_{\dot{\gamma}} X = \gamma \rfloor \nabla X = 0 \]
+Sviluppando questa condizione si trova (per brevit\`a: i simboli $\cos$ e $\sin$ sottintendono l'argomento $\omega t$; si scrive $y$ intendendolo valutato su $\gamma$, come indicato a pedice))
+\[ \begin{cases}
+	\dot{\gamma}^\mu (\nabla_\mu X)^x = \omega r \left[ -\sin \partial_x X^x + \cos \partial_y X^x
+		+\frac{\sin X^y - \cos X^x}{y}\right]_\gamma = 0  & \\
+	\dot{\gamma}^\mu (\nabla_\mu X)^y = \omega r \left[ -\sin \partial_x X^y + \cos \partial_y X^y
+		+\frac{-\epsilon\sin X^x - \cos X^y}{y}\right]_\gamma = 0  & \\
+   \end{cases}
+\]
+Prendendo \(\epsilon=+1\), moltiplicando membro a membro la seconda equazione per $i$ e sommando le due si trova
+\[\omega r\left[(-\sin \partial_x+\cos \partial_y)(X^x+ix^y) - \left.\frac{1}{y}\right|_\gamma (X^x+iX^y) e^{+\omega t}\right] = 0 \]
+Definendo \( Z = X^x +iX^y \), \(\dot{Z} = \dtotal{\gamma^i}{t}\left.\nabla_i Z \right|_\gamma\) e l'equazione diventa
+\[ \dot{Z} - \omega r \frac{e^{i\omega t}}{y_0 + r\sin{\omega t}} Z \]

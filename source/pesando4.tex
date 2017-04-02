@@ -1,0 +1,70 @@
+\subsection{Osservatori in Minkowsky}
+Data la metrica 
+\[ \de s^2 = -\de t^2 + \dx^2 \]
+il cambio di variabili
+\[ x = x_0 + vt_0 ; \;\;\; t = t_0 \]
+porta, in forma canonica, a 
+\[ \de s ^2 = (v^2 -1)\left( \de t_0 + \frac{v}{v^2 -1} \dx_0\right)^2   - \frac{1}{v^2-1} \dx_0^2 \]
+da cui si identifica facilmente
+\[ \de l^2 = \frac{1}{v^2-1} \dx_0^2 \]
+Si pu\`o quindi definire una nuova coppia di variabili, separando la parte spaziale e quella temporale: \( \de X = \de l \).
+
+
+
+\subsection{manca}
+
+\subsection{Schwartzschild per osservatori in moto}
+Data la metrica di Schwartzschild in D dimensioni
+\[  \de s^2 = -c^2 \left( 1- \left(\frac{r_s}{r}\right)^{D-3}\right) \de t^2 + \frac{\de r^2}{1- \left(\frac{r_s}{r}\right)^{D-3}} + r^2 (\de \theta_{D-2} + ...) \]
+si calcola il limite di campo debole della sua azione: si considera \( g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu} \) dove $\eta$ \`e la metrica piatta e $h$ rappresenta le perturbazioni gravitazionali, tali che siano infinitesime e dello stesso ordine tra loro.
+\[ S = -mc \int \de \lambda \sqrt{- c^2  \left( 1- \left(\frac{r_s}{r}\right)^{D-3} \right)  \dot{t}^2 + g_{ij} \dot{x}^i \dot{x}^j} \]
+dove \( \left(\frac{r_s}{r}\right)^{D-3} = \mathcal{O}(|h|) \).
+Prendendo \( \lambda = t \) e moltiplicando per 
+\( (1-v^2/c^2)^{1/2} (1-v^2/c^2)^{-1/2} \sim \left(1-\frac{v^2}{2c^2}\right) \left(1+\frac{v^2}{2c^2}\right)\)
+(dove il quadrato di un vettore indica la sua norma al quadrato) si arriva a 
+\[ S = -mc^2 \int \de t  \left(1-\frac{v^2}{2c^2}\right) \left( 1 -\frac{1}{2} \left(\frac{r_s}{r}\right)^{D-3} + \mathcal{O}(\frac{v^2}{2c^2}\cdot |h|) \right) \]
+\[ = -mc^2 \int \de t  \left(1-\frac{v^2}{2c^2} -\frac{1}{2} \left(\frac{r_s}{r}\right)^{D-3} \right)\]
+\[ = \int \de t \left(  -mc^2  + \frac{1}{2}mv^2 + \frac{1}{2} mc^2\left(\frac{r_s}{r}\right)^{D-3} \right)\]
+Identificando i primi due addendi come il termine di massa e quello cinetico, si pu\`o identificare il restante come potenziale gravitazionale, da cui
+\[ \frac{1}{2} mc^2\left(\frac{r_s}{r}\right)^{D-3} = -m\phi_{grav} \;\;\Rightarrow \;\;r_s^{D-3} = \frac{2MG_D}{c^2} \]
+
+Si pu\`o definire il cambiamento di coordinate
+\[ r^2 = x^2 + \vec{x}^2_\perp \;\;\; ; \;\;\; \cos\theta_{D-2} = \frac{x_{D-1}}{r}  \;\; ; \;\; \cos\theta_{D-3} = \frac{x_{D-1}}{r\cos\theta_{D-2}} \;\; ...\] 
+e si vede che 
+\[ \sum \de x_i^2 = \de x^2 + \de x^2_\perp = \de r^2 + r^2(\de \theta_{D-2} + \de \theta_{D-3} \sin^2\theta_{D-2} + ... )\]
+da cui, raccogliendo $\de r$,
+\[  \de s^2 = -c^2 \left( 1- \left(\frac{r_s}{r}\right)^{D-3} \right) \de t^2 
+    + \frac{     \left(\frac{r_s}{r}\right)^{D-3} }
+           { 1-  \left(\frac{r_s}{r}\right)^{D-3} } \de r^2 
+    +  \de x^2 + \de x^2_\perp  \]
+
+
+\subsubsection{Osservatori in moto}
+L'analogo di una trasformazione di Lorentz si ha con
+\[ ct = \gamma \frac{1+\beta}{2}U + \gamma \frac{1-\beta}{2}V \;\;\; ; \;\;\; x = \gamma \frac{1+\beta}{2}U - \gamma \frac{1-\beta}{2}V \]
+dove U e V sono le coordinate di cono luce. Siccome si vuole determinare la metrica per un osservatore in moto alla velocit\`a della luce,  si pone il limite \( \beta \rightarrow 1 \).
+Si scrive la trasformazione dei termini in $\de t$ e $\dx$, per poi imporre le condizioni desiderate:
+\[ -c^2 \left( 1- \left(\frac{r_s}{r}\right)^{D-3} \right) \de t^2 +  \de x^2 \] 
+\[ \rightarrow \;\;\; \gamma^2 \frac{(1+\beta)^2}{4} \de U^2 + \gamma^2 \frac{(1-\beta)^2}{4} \de V^2 - \de U\de V + \left(\frac{r_s}{r}\right)^{D-3}(\gamma^2 \frac{(1+\beta)^2}{4} \de U^2 + \gamma^2 \frac{(1-\beta)^2}{4} \de V^2 - \de U\de V) \]
+Si nota subito che tutti i coefficienti di $\de V$ tendono a zero. Inoltre per \(U\neq 0\)
+\[ r = \sqrt{ \gamma^2 (\frac{(1+\beta)^2}{4} U^2 +  \gamma^2 (\frac{(1+\beta)^2}{4} V^2 - UV +   x^2_\perp} \]
+che nel limite tende a infinito a causa del $\gamma$ davanti a $U^2$, per cui tutti i termini $\left(\frac{r_s}{r}\right)^{D-3}$ si annullano e rimane
+\[ \de s^2 = -\de U\de V + \de x^2_\perp \]
+Nel caso in cui \(U=0\), invece, 
+\[ r = \sqrt{  x^2_\perp } = x_\perp\]
+e 
+\[ \de s^2 = \gamma^2  \left(\frac{r_s}{x_\perp}\right)^{D-3} \de U^2 + \mathrm{o}(\de U^2) \]
+che diverge nel limite.
+
+\subsubsection{Metrica di Aichelburg-Sexl}
+I termini in $\de t$ e $\dx$ si possono riscrivere all'ordine di $\de U^2$, tenendo conto che il termine in $V^2$ svanisce, come
+\[ -\de U\de V + r_s^{D-3} \left[ \frac{\gamma^2}{ (\gamma^2 U^2 - UV + x_\perp^2)^{(D-3)/2} } \de U^2 \right] \]
+e usando il limite noto \todo RIFERIMENTO 
+\[ \left[ \frac{\gamma^2}{ (\gamma^2 U^2 - UV + x_\perp^2)^{(D-3)/2} } \right] =  N_D \frac{\delta{U}}{-UV + x_\perp^{D-4}} =  N_D \frac{\delta{U}}{ x_\perp^{D-4}} \]
+inoltre si impone \todo perche'?
+\[ \mathrm{lim} M \gamma = M_* \]
+per cui 
+\[r_s \rightarrow r_{s*} \]
+Unendo i risultati \todo e gli altri termini in dr?
+\[ \de s^2 = -\de U\de V + N_D r_{s*}^{D-3} N_D \frac{\delta{U}}{ x_\perp^{D-4}} \de U^2 + \de x_\perp^2 \]
+

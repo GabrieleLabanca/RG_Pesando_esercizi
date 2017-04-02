@@ -16,3 +16,10 @@
 \contentsline {subsection}{\numberline {2.2}Rotazioni}{5}{subsection.2.2}
 \contentsline {section}{\numberline {3}Foglio 3}{6}{section.3}
 \contentsline {subsection}{\numberline {3.1}Metrica bidimensionale}{6}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Traiettoria circolare}{12}{subsubsection.3.1.1}
+\contentsline {section}{\numberline {4}Foglio 4}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Osservatori in Minkowsky}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}manca}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Schwartzschild per osservatori in moto}{13}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Osservatori in moto}{13}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Metrica di Aichelburg-Sexl}{14}{subsubsection.4.3.2}
