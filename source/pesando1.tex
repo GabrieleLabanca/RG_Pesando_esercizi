@@ -1,9 +1,9 @@
-\subsection{1 - Osservatori uniformemente accelerati}
-Considero una particella $P_0$, uniformemente accelerata rispetto al sistema istantaneamente inerziale  $\mathcal{I}$.
+\subsection{ Osservatori uniformemente accelerati}
+Si considera una particella $P_0$, uniformemente accelerata rispetto al sistema istantaneamente inerziale  $\mathcal{I}$.
 Il sistema $\mathcal{I}$ va inteso come un insieme di sistemi di riferimento inerziali, tra i quali, per ogni tempo, si considera quello rispetto a cui la particella $P_0$ \`e istantaneamente ferma.
-\paragraph{Particella accelerata}
-Considero una generica particella $P$, con velocit\`a $u$ e accelerazione $a$ nel sistema $\mathcal{I}$
-Scrivo il boost a velocit\`a inversa dal sistema in movimento $\mathcal{I}$ al sistema terra $\mathcal{T}$:
+\subsubsection{Particella accelerata}
+Si considera una generica particella $P$, con velocit\`a $u$ e accelerazione $a$ nel sistema $\mathcal{I}$.
+Il boost a velocit\`a inversa dal sistema in movimento $\mathcal{I}$ al sistema terra $\mathcal{T}$ \`e
 \begin{equation}
 	\begin{cases}
 		\dx_T = \gamma (\dx + v \dt) &  \\
@@ -15,7 +15,7 @@ Scrivo il boost a velocit\`a inversa dal sistema in movimento $\mathcal{I}$ al s
 \begin{equation} \label{accel_P}
 	a_T = \frac{\de u_T}{\dt} = \frac{(1-v^2)^{3/2}}{(1+uv)^3} a 
 \end{equation}
-Volendo trovare la velocit\`a della particella $P_0$, utilizzo l'equazione \ref{accel_P} e la specializzo: la velocit\`a $u$ va posta nulla perch\`e considero la particella $P_0$, ferma in $\mathcal{I}$, e considero l'evoluzione temporale di $v(t_T)$, rispetto al sistema $\mathcal{T}$; la velocit\`a della particella rispetto a $\mathcal{T}$ \`e adesso $v$ e \( a = a_0 \):
+Volendo trovare la velocit\`a della particella $P_0$, si utilizza l'equazione \ref{accel_P} e la si specializza: la velocit\`a $u$ va posta nulla perch\`e si considera la particella $P_0$, ferma in $\mathcal{I}$, e l'evoluzione temporale di $v(t_T)$, rispetto al sistema $\mathcal{T}$; la velocit\`a della particella rispetto a $\mathcal{T}$ \`e adesso $v$ e \( a = a_0 \):
 \[ a_T = \frac{\de v(t_T)}{\dt_T} = [1-v^2(t_T)]^{3/2} a_0 \]
 \[ a_0t_T = \int_0^{v(t_T)} \frac{\de v}{(1-v^2)^{3/2}} \]
 sostituisco $v=\sin(\theta)$
@@ -34,24 +34,38 @@ Sostituendo prima \( y=a_0t_T \) e poi \( y = \sinh(z) \) si ottiene
 \begin{equation} \label{leggeoraria}
 	x_T(t_T) = \frac{\sqrt{1+(a_0t_T)^2}-1}{a_0} 
 \end{equation}
-\todo limite di basse velocit\`a
+Se si prende il limite di basse velocit\`a si avr\`a \( a_0t_T << 1 \), da cui si ottiene
+\[ x_t(t_T) \sim \frac{1}{2}a_0t_T^2 \]
+che corrisponde alla formula newtoniana.
 
-\paragraph {Achille e la lepre}
-Uguagliando c*t a xT dovrei trovare qualcosa, ma se metto c=1 si cancella tquadro e se lo tengo non so dove sbattere la testa.
+\subsubsection{Achille e la lepre}
+Uguagliando la posizione di una particella accelerata da ferma a partire da $x_0$ alla posizione di un raggio luminoso partito dall'origine, si ottiene
+\[ t_T = \frac{\sqrt{1+(a_0t_T)^2}-1}{a_0} + x_0 \] 
+\[ a_0t - x_0a_0 +1 = \sqrt{1+(a_0t_T)^2}-1 \]
+con condizione \( a_0t - x_0a_0 +1 >0 \) \todo. Procedendo,
+\[ t = \frac{x_0(x_0a_0 -2)}{2(1-a_0x_0)} \]
+che ha soluzione per \( 1 < x_0a_0 <2 \).
 
-\paragraph {Tempo proprio}
+
+
+\subsubsection{Tempo proprio}
 Con \(\de s^2 = -c^2\dt^2 + \dx^2 \):
-\[ ic\de\tau = \de s = ic\dt_T \sqrt(1*-v^2(t_T)) \]
-\[ \tau = \int_0^{t_T} \sqrt(1*-v^2(t)) \dt = \int \frac{1}{\sqrt{1+(a_0t)^2}} \dt \]
+\[ ic\de\tau = \de s = ic\dt_T \sqrt{1-v^2(t_T)} \]
+\[ \tau = \int_0^{t_T} \sqrt{1-v^2(t)} \dt = \int \frac{1}{\sqrt{1+(a_0t)^2}} \dt \]
 Sostituendo \( a_0t = \cosh z \)
 \[ \tau = \int \frac {\de z}{a_0} = \frac{\sinh^{-1}(a_0t_T)}{a_0} = \frac{\ln({\sqrt{1+(a_0t_T)^2}+a_0t_T)}}{a_0}\]
 
-\paragraph {$10^9$ anni-luce} \todo udm di c
-Per percorrere una distanza di $10^9 \mathrm{ly}$ con accelerazione da fermo di \(g=9.8m/s^2=1.030ly/y^2\), usando la formula \ref{leggeoraria}, occorrono
-\[ \sqrt{\frac{d}{c}^2 + 2\frac{d}{g}} \simeq 2.998\cdot10^18y \]
-cui corrisponde un tempo proprio \( \tau \simeq 41.972 y \).
+\subsubsection {$10^9$ anni-luce} 
+%Per percorrere una distanza di $10^9 \mathrm{ly}$ con accelerazione da fermo di \(g=9.8m/s^2=1.030ly/y^2\), usando la formula \ref{leggeoraria}, occorrono
+%\[ \sqrt{\frac{d}{c}^2 + 2\frac{d}{g}} \simeq 2.998\cdot10^18y \]
+%cui corrisponde un tempo proprio \( \tau \simeq 41.972 y \).
+Utilizzando la formula \ref{leggeoraria}
+\[ 10^9  = \frac{ \sqrt{1 +(1.030t)^2} -1 }{1.030} \]
+da cui \( t_T\sim 10^9 \).
+Utilizzando la formula del tempo proprio,
+\[ \tau = \frac{ \ln(\sqrt{1+(a_0t_T)^2} + a_0t_T )}{a_0} \sim 20.82 y \]
 
-\paragraph {Perch\`e non andiamo su Giove?}
+\subsubsection {Perch\`e non andiamo su Giove?}
 Con le formule della meccanica classica,
 \[ t_{TOT} = 4\cdot \sqrt{\frac{2x_{TM}}{g}} = 2.8558587119250753 y \]
 In relativit\`a ristretta, dove 'lh' sono le ore-luce,
@@ -77,29 +91,33 @@ tempo proprio:
 
 
 
-\paragraph{Razzo relativistico}
+\subsubsection{Razzo relativistico}
 Considero il sistema $\mathcal{I}$ in cui il razzo \`e fermo e i sistemi $\mathcal{E}$, in cui \`e ferma la $\de m$ espulsa, e $\mathcal{J}$, in cui \`e fermo il razzo propulso con massa $m-\de m$. Nel sistema $\mathcal{I}$:
-\[ \de m v_e \gamma(v_e) = (m - \de m) \de v \gamma(\de v) \sim m \de v \]
-\[ \frac{\de m}{m} = \frac{1}{v_e \gamma(v_E)} \frac{\de v}{\de\tau} \de\tau \]
-\[ m = m_0 e^{\frac{\frac{\de v}{\de\tau}}{v_e \gamma(v_e) }} \]
-\[ m = m_0 e^{\frac{a_0\tau}{v_e \gamma(v_e) }} \]
+\[ \delta m v_e \gamma(v_e) = (m - \de m) \de v \gamma(\de v) \sim m \de v \]
+\[ \frac{\delta m}{m} = \frac{1}{v_e \gamma(v_E)} \frac{\de v}{\de\tau} \de\tau \]
+Considerando che \( \delta m \gamma(v_e)  = -\de m \) e che \( \frac{\de v}{\de t} = a_0 \),
+\[ \frac{\de m}{m} = -\frac{\de v}{\de t} \frac{\de t}{\de \tau} \frac{\tau}{v_e} = -\frac{a_0}{v_e\sqrt{1-v_e^2}}\de \tau \]
+da cui infine
+\[ m(\tau) = e^{-\frac{a_0\tau}{v_e \sqrt{1-v_e^2}}} \]
+%\[ m = m_0 e^{\frac{\frac{\de v}{\de\tau}}{v_e \gamma(v_e) }} \]
+%\[ m = m_0 e^{\frac{a_0\tau}{v_e \gamma(v_e) }} \]
 
-\paragraph{Campo elettrico}
+\subsubsection{Campo elettrico}
 
 
 
 
 
-\subsection{2 - Campo elettrico di una particella carica senza massa}
-\paragraph{Quadripotenziale}
+\subsection{ Campo elettrico di una particella carica senza massa}
+\subsubsection{Quadripotenziale}
 Considerando la gauge in cui le componenti spaziali di $A^\mu$ sono nulle (in quanto il campo magnetico prodotto da una particella ferma \`e nullo), $A^0$ puo' essere ricavato, a meno di costanti, considerando che la sua derivata \`e il campo elettrico, che sara\`a un vettore (D-1)-dimensionale. Per il teorema di Gauss,
 \[ \int_\Sigma \vec{E}\cdot\vec{\Sigma} = \frac{\rho}{\epsilon_0} =  (cost) \cdot \frac{r^{D-1}}{r^k}\Omega \]
 E siccome la dipendenza da r deve cancellarsi \( E_i = \frac{\Gamma(\frac{D-1}{2})}{2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-2}} \), quindi
 \[ A = (-\frac{\Gamma(\frac{D-1}{2})}{(D-1)2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-1}},\vec{0}) \]
-\paragraph{Tensore elettromagnetico}
+\subsubsection{Tensore elettromagnetico}
 Le componenti non nulle del tensore $F_{\mu\nu}$ sono le $F_{i0}=-F_{0i}=E_i$.
 
-\paragraph{Coordinate cono-luce}
+\subsubsection{Coordinate cono-luce}
 Il cambio di coordinate \`e
 \[ \Upsilon_\xi^\mu = 
 \begin{pmatrix}
