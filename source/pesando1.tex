@@ -110,36 +110,73 @@ da cui infine
 
 \subsection{ Campo elettrico di una particella carica senza massa}
 \subsubsection{Quadripotenziale}
-Considerando la gauge in cui le componenti spaziali di $A^\mu$ sono nulle (in quanto il campo magnetico prodotto da una particella ferma \`e nullo), $A^0$ puo' essere ricavato, a meno di costanti, considerando che la sua derivata \`e il campo elettrico, che sara\`a un vettore (D-1)-dimensionale. Per il teorema di Gauss,
-\[ \int_\Sigma \vec{E}\cdot\vec{\Sigma} = \frac{\rho}{\epsilon_0} =  (cost) \cdot \frac{r^{D-1}}{r^k}\Omega \]
-E siccome la dipendenza da r deve cancellarsi \( E_i = \frac{\Gamma(\frac{D-1}{2})}{2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-2}} \), quindi
-\[ A = (-\frac{\Gamma(\frac{D-1}{2})}{(D-1)2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-1}},\vec{0}) \]
+Considerando la gauge in cui le componenti spaziali di $\tilde{A}^\mu$ sono nulle (in quanto il campo magnetico prodotto da una particella ferma \`e nullo), $\tilde{A}^0$ puo' essere ricavato, a meno di costanti, considerando che la sua derivata \`e il campo elettrico, che sar\`a un vettore (D-1)-dimensionale. Per il teorema di Gauss,
+\[ \int_\Sigma \vec{\tilde{E}}\cdot\vec{\Sigma} = \frac{\rho}{\epsilon_0} = \int_V \vec{\nabla}\cdot\vec{\tilde{E}} \de V \propto \int\de\Omega \int \frac{r^{D-2}}{r^{n+1}} \de r \]
+dove $\de\Omega$ \`e l'elemento di volume (D-2)-dimensionale. Siccome la dipendenza da r deve cancellarsi \( E_i = e\frac{\Gamma(\frac{D-1}{2})}{2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-2}} \), quindi
+\[ \tilde{A} = (-e\frac{\Gamma(\frac{D-1}{2})}{(D-1)2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-3}},\vec{0}) \]
 \subsubsection{Tensore elettromagnetico}
 Le componenti non nulle del tensore $F_{\mu\nu}$ sono le $F_{i0}=-F_{0i}=E_i$.
 
 \subsubsection{Coordinate cono-luce}
 Il cambio di coordinate \`e
 \[ \Upsilon_\xi^\mu = 
+\frac{1}{\sqrt{2}}
 \begin{pmatrix}
-	1/\sqrt{2} & 1/\sqrt{2}  \\
-	1/\sqrt{2} & -1/\sqrt{2} \\
+	1 &  1 & 0 &\cdots  \\
+	1 & -1 & 0 & \cdots  \\       
+	0 &  0 & 1 & \cdots \\
+	\vdots  & \vdots  & \vdots & \ddots \\
 \end{pmatrix} 
 \]
-e il tensore elettromagnetico trasforma nel modo seguente:
-\[ \tilde{F}_{\xi\varsigma} = \Upsilon_\xi^\mu \Upsilon_\varsigma^\nu F_{\mu\nu} = 
+ e il tensore elettromagnetico trasforma nel modo seguente:
+\[ F_{\xi\varsigma} = \Upsilon_\xi^\mu \Upsilon_\varsigma^\nu \tilde{F}_{\mu\nu} = 
+\begin{pmatrix} 
+	0             &  -E_1         & E_2/\sqrt{2}   & E_3/\sqrt{2} & \cdots \\
+	E_1           &  0            & E_2/\sqrt{2}   & E_3/\sqrt{2} & \cdots \\       
+	-E_2/\sqrt{2} & -E_2/\sqrt{2} & 0              & 0            & \cdots \\
+	-E_3/\sqrt{2} & -E_3/\sqrt{2} & 0              & 0            & \cdots \\
+	\vdots        & \vdots        & \vdots         & \vdots       & \ddots \\
+\end{pmatrix}
+\]
+dove gli $E_i$ sono i campi trasformati di coordinate, valutati nelle nuove coordinate. 
+
+Un boost porta a 
+\[ x^{\pm} \rightarrow \gamma(1\mp\beta) x^{\pm} \]
+pertanto al boost corrisponde, in queste coordinate, 
+\[ \Lambda =
 \begin{pmatrix}
-	0    & E_1 \\
-	-E_1 & 0   \\
+	\gamma(1-\beta) & 0               & 0      &\cdots  \\
+	0               & \gamma(1+\beta) & 0      & \cdots  \\       
+	0               & 0               & 1      & \cdots \\
+	\vdots          & \vdots          & \vdots & \ddots \\
+\end{pmatrix} 
+\]
+e
+\[ F_{\mu\nu} \rightarrow 
+\begin{pmatrix} 
+	0                             &  -E_1                & \gamma(1-\beta) E_2/\sqrt{2} & \cdots \\
+	E_1                           &  0                   & \gamma(1+\beta) E_2/\sqrt{2} & \cdots \\      
+	-\gamma(1-\beta)E_2/\sqrt{2}  & -\gamma(1+\beta)E_2/\sqrt{2}       & 0           & \cdots \\
+	\vdots        & \vdots        & \vdots        & \vdots                       & \ddots \\
 \end{pmatrix}
 \]
 
-Se cambio la velocit\`a:
-\[ x^{\pm} = \gamma(1-\beta) x^{\pm} = \sqrt{\frac{1-\beta}{1+\beta}} \]
-
-
-
-
-
+\subsubsection{Limite di alte velocit\`a}
+Il limite
+\[ \lim_{\gamma\rightarrow\infty} \frac{\gamma}{[\gamma^2a^2+b^2]^{\frac{D-1}{2}}} = N_D \frac{\delta(a)}{b^{D-2}} \]
+si giustifica osservando che per \( a\neq0\) tende a 0, mentre per \( a=0\) tende a $\infty$, cos\`i come fa la $\delta$ di Dirac.
+Scrivendo
+\[ \frac{1}{(\frac{\gamma^2a^2}{b^2} +1)^{\frac{D-1}{2}}} = \frac{1}{\Gamma({\frac{D-1}{2}})} 
+		\int \de \tau \;\tau^{\frac{D-1}{2}-1}e^{\tau(\frac{\gamma^2a^2}{b^2}+1)} \]
+e integrando tale risultato in $\de a$ si ottiene
+\[ \frac{1}{\Gamma({\frac{D-1}{2}})} 
+		\int \de \tau \;\tau^{\frac{D-1}{2}-\frac{3}{2}} e^{-\tau} \frac{\sqrt{\pi}b}{\gamma} \]
+\[ = \frac{\Gamma({\frac{D-1}{2}}-\frac{1}{2})}{\Gamma({\frac{D-1}{2}})} \frac{\sqrt{\pi}b}{\gamma} \]
+dove si \`e riconosciuta la Gamma di Eulero.
+A questo punto, usando \( \int \de a \; \delta(a) = 1 \),
+\[ \lim_{\gamma\rightarrow\infty} \frac{\gamma}{b^{D-1}} \frac{\Gamma({\frac{D-1}{2}}-\frac{1}{2})}{\Gamma({\frac{D-1}{2}})} \frac{\sqrt{\pi}b}{\gamma} = \frac{N_D}{b^{D-2}} \]
+Quindi
+\[ N_D = \sqrt{\pi} \frac{\Gamma({\frac{D-1}{2}}-\frac{1}{2})}{\Gamma({\frac{D-1}{2}})} \]
 
 
 
