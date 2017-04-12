@@ -10,22 +10,24 @@
 \contentsline {subsection}{\numberline {1.2} Campo elettrico di una particella carica senza massa}{5}{subsection.1.2}
 \contentsline {subsubsection}{\numberline {1.2.1}Quadripotenziale}{5}{subsubsection.1.2.1}
 \contentsline {subsubsection}{\numberline {1.2.2}Tensore elettromagnetico}{5}{subsubsection.1.2.2}
-\contentsline {subsubsection}{\numberline {1.2.3}Coordinate cono-luce}{5}{subsubsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.3}Coordinate cono-luce}{6}{subsubsection.1.2.3}
 \contentsline {subsubsection}{\numberline {1.2.4}Limite di alte velocit\`a}{6}{subsubsection.1.2.4}
-\contentsline {section}{\numberline {2}Foglio 2}{6}{section.2}
-\contentsline {subsection}{\numberline {2.1}Proiezione stereografica}{6}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Rotazioni}{7}{subsection.2.2}
-\contentsline {section}{\numberline {3}Foglio 3}{8}{section.3}
-\contentsline {subsection}{\numberline {3.1}Metrica bidimensionale}{8}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Traiettoria circolare}{13}{subsubsection.3.1.1}
-\contentsline {section}{\numberline {4}Foglio 4}{14}{section.4}
-\contentsline {subsection}{\numberline {4.1}Osservatori in Minkowsky}{14}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}manca}{14}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Schwartzschild per osservatori in moto}{14}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Osservatori in moto}{15}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}Metrica di Aichelburg-Sexl}{16}{subsubsection.4.3.2}
-\contentsline {section}{\numberline {5}Foglio 5}{16}{section.5}
-\contentsline {subsubsection}{\numberline {5.0.1}Campo debole}{16}{subsubsection.5.0.1}
-\contentsline {subsubsection}{\numberline {5.0.2}Funzione di Green}{17}{subsubsection.5.0.2}
-\contentsline {subsubsection}{\numberline {5.0.3}Polvere}{18}{subsubsection.5.0.3}
-\contentsline {subsubsection}{\numberline {5.0.4}Centro di massa nell'origine}{19}{subsubsection.5.0.4}
+\contentsline {section}{\numberline {2}Foglio 2}{7}{section.2}
+\contentsline {subsection}{\numberline {2.1}Proiezione stereografica}{7}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Rotazioni}{8}{subsection.2.2}
+\contentsline {section}{\numberline {3}Foglio 3}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Metrica bidimensionale}{9}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Traiettoria circolare}{14}{subsubsection.3.1.1}
+\contentsline {section}{\numberline {4}Foglio 4}{15}{section.4}
+\contentsline {subsection}{\numberline {4.1}Osservatori in Minkowsky}{15}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Metrica di Rindler}{15}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Schwartzschild per osservatori in moto}{15}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Osservatori in moto}{16}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Metrica di Aichelburg-Sexl}{17}{subsubsection.4.3.2}
+\contentsline {section}{\numberline {5}Foglio 5}{17}{section.5}
+\contentsline {subsubsection}{\numberline {5.0.1}Campo debole}{17}{subsubsection.5.0.1}
+\contentsline {subsubsection}{\numberline {5.0.2}Gauge "di Lorenz"}{18}{subsubsection.5.0.2}
+\contentsline {subsubsection}{\numberline {5.0.3}Equazioni di Einstein}{19}{subsubsection.5.0.3}
+\contentsline {subsubsection}{\numberline {5.0.4}Funzione di Green}{19}{subsubsection.5.0.4}
+\contentsline {subsubsection}{\numberline {5.0.5}Polvere}{20}{subsubsection.5.0.5}
+\contentsline {subsubsection}{\numberline {5.0.6}Centro di massa nell'origine}{21}{subsubsection.5.0.6}

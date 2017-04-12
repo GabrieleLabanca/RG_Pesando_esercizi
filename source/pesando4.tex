@@ -11,7 +11,26 @@ Si pu\`o quindi definire una nuova coppia di variabili, separando la parte spazi
 
 
 
-\subsection{manca}
+\subsection{Metrica di Rindler}
+Presa la metrica 
+\[ \de s^2 = -\kappa^2x^2\de t^2 +\de x^2 \]
+si calcolano le geodetiche
+\[ 0 = \ddot{x} + k^2x\dot{t}^2 = \ddot{x} + \Gamma^x_{tt} \dot{t}^2 \;\;\; ;\;\;\; 0= \ddot{t} + \frac{2}{x} \dot{x}\dot{t} = \ddot{t} + \Gamma^t_{xt}\dot{x}\dot{t} \]
+da cui 
+\[ \Gamma^x_{tt} = k^2x \;\;\;;\;\;\;  \Gamma^t_{xt} = \frac{1}{x} \]
+Per le traiettorie a \(x=\bar{x}=\mathrm{cost} \)
+\[ \gamma(t) = (t,\bar{x}) \]
+si ha 
+\[ \dot{\gamma} = \partial_t \gamma= e_t \Rightarrow \|\dot{\gamma}\|^2 =-\kappa^2x^2  \]
+da cui 
+\[ u_\mu = \frac{\dot{\gamma}}{\sqrt{-\|\dot{\gamma}}} = \frac{e_t}{k\bar{x}} \]
+L'accelerazione \`e quindi
+\[ a = \nabla_ u = \frac{1}{k^2\bar{x}^2} \nabla_t e_t =  \frac{1}{k^2\bar{x}^2} \Gamma_{tt}^x e_x = \frac{e_x}{\bar{x}} \]
+
+
+
+
+
 
 \subsection{Schwartzschild per osservatori in moto}
 Data la metrica di Schwartzschild in D dimensioni
@@ -59,12 +78,14 @@ che diverge nel limite.
 \subsubsection{Metrica di Aichelburg-Sexl}
 I termini in $\de t$ e $\dx$ si possono riscrivere all'ordine di $\de U^2$, tenendo conto che il termine in $V^2$ svanisce, come
 \[ -\de U\de V + r_s^{D-3} \left[ \frac{\gamma^2}{ (\gamma^2 U^2 - UV + x_\perp^2)^{(D-3)/2} } \de U^2 \right] \]
-e usando il limite noto \todo RIFERIMENTO 
+e usando il limite noto \ref{eq:limND}
 \[ \left[ \frac{\gamma^2}{ (\gamma^2 U^2 - UV + x_\perp^2)^{(D-3)/2} } \right] =  N_D \frac{\delta{U}}{-UV + x_\perp^{D-4}} =  N_D \frac{\delta{U}}{ x_\perp^{D-4}} \]
-inoltre si impone \todo perche'?
+inoltre si impone 
 \[ \mathrm{lim} M \gamma = M_* \]
+che ha il significato di una massa limite, non infinita, in modo che abbia significato fisico;
 per cui 
 \[r_s \rightarrow r_{s*} \]
-Unendo i risultati \todo e gli altri termini in dr?
+Unendo i risultati 
 \[ \de s^2 = -\de U\de V + N_D r_{s*}^{D-3} N_D \frac{\delta{U}}{ x_\perp^{D-4}} \de U^2 + \de x_\perp^2 \]
+cio\`e tale metrica \`e analoga a quella piatta, fatta eccezione per il supporto della $\delta$, cio\`e la bisettrice del II e IV quadrante nel piano (X,cT).
 

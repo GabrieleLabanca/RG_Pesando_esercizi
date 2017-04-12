@@ -42,7 +42,7 @@ che corrisponde alla formula newtoniana.
 Uguagliando la posizione di una particella accelerata da ferma a partire da $x_0$ alla posizione di un raggio luminoso partito dall'origine, si ottiene
 \[ t_T = \frac{\sqrt{1+(a_0t_T)^2}-1}{a_0} + x_0 \] 
 \[ a_0t - x_0a_0 +1 = \sqrt{1+(a_0t_T)^2}-1 \]
-con condizione \( a_0t - x_0a_0 +1 >0 \) \todo. Procedendo,
+con condizione \( a_0t - x_0a_0 +1 >0 \) . Procedendo,
 \[ t = \frac{x_0(x_0a_0 -2)}{2(1-a_0x_0)} \]
 che ha soluzione per \( 1 < x_0a_0 <2 \).
 
@@ -67,10 +67,8 @@ Utilizzando la formula del tempo proprio,
 
 \subsubsection {Perch\`e non andiamo su Giove?}
 Con le formule della meccanica classica,
-\[ t_{TOT} = 4\cdot \sqrt{\frac{2x_{TM}}{g}} = 2.8558587119250753 y \]
+\[ t_{TOT} = 4\cdot \sqrt{\frac{x_{TG}}{g}} =i 1025.2h = 42.7 \mathrm{giorni} \]
 In relativit\`a ristretta, dove 'lh' sono le ore-luce,
-\[ t_{TM} = 260.627804384274lh \]
-\[ v_{TM} = 0.9999999999999941 c \]
 Modificando opportunamente la formula \ref{veloc} per velocit\`a iniziale non nulla, si ottiene
 \[ v(t_T) = \frac{a_0 t_T + \tan\arcsin(v_0)          }
 	{\sqrt{1+( a_0t_T + \tan\arcsin(v_0)           )^2 }}  \]
@@ -79,16 +77,18 @@ Modificando opportunamente la formula \ref{veloc} per velocit\`a iniziale non nu
 E per la legge oraria
 \[ x_T(t_T) = \frac{\sqrt{1+ (-gt_T + \frac{v_0}{\sqrt{1-v_0^2}})^2 } - 
 	\sqrt{1+  (\frac{v_0}{\sqrt{1-v_0^2}})^2}     }{-g} \]
-Invertendo:
-\[ t = \frac{ \frac{v_0}{\sqrt{1-v_0^2}} + \sqrt{ (\frac{v_0}{\sqrt{1-v_0^2}})^2 - 2gx \sqrt{1+( \frac{v_0}{\sqrt{1-v_0^2}}    )^2     }  } }
-             {  g   }\]
-\todo risultati bruttissimi
+Invertendo e definendo \( \xi = \xi(v_0) = \frac{v_0}{\sqrt{1-v_0^2}} \) :
+\[ t = \frac{\sqrt{(a_0x+\sqrt{1+\xi^2})^2-1} -\xi}{a_0} \]
+%\[ t = \frac{ \frac{v_0}{\sqrt{1-v_0^2}} + \sqrt{ (\frac{v_0}{\sqrt{1-v_0^2}})^2 - 2gx \sqrt{1+( \frac{v_0}{\sqrt{1-v_0^2}}    )^2     }  }}              {  g   }\]
 
-2.99792458e+18  anni
-tempo proprio:
-41.9715540832882 anni
+Nel viaggio Terra-punto medio:
+\[ t_TM = \frac{\sqrt{(a_0x+1)^2- }}{a_0} = 0.042y \]
+\[ v(t) = 0.043c = v_0\]
+\[ \xi(v_0) = 0.043 \]
+\[ t_{MG} = 0.018y \]
+\[t_{TOT} = 1.22y \]
 
-
+Il tempo impiegato in meccanica classica \`e inferiore per due ragioni: la prima \`e che non c'\`e una velocit\`a limite, la seconda che in relativit\`a speciale \`e pi\`u difficile accelerare un corpo tanto pi\`u quanto questo va veloce.
 
 
 \subsubsection{Razzo relativistico}
@@ -101,8 +101,24 @@ da cui infine
 \[ m(\tau) = e^{-\frac{a_0\tau}{v_e \sqrt{1-v_e^2}}} \]
 %\[ m = m_0 e^{\frac{\frac{\de v}{\de\tau}}{v_e \gamma(v_e) }} \]
 %\[ m = m_0 e^{\frac{a_0\tau}{v_e \gamma(v_e) }} \]
+Utilizzando i risultati del tempo di volo fino a Giove, per arrivare dalla Terra al punto M il tempo proprio \`e \(\tau = 0.042y \), quindi
+\[ m_i/m_f = e^{\frac{a_0\tau}{\sqrt{q-v_e^2}v_e}} = 
+\begin{cases}
+	e^{1.25\cdot10^3} & v_e = 10km/s \\
+	75.7              & v_e = c/100 \\
+	1.54              & v_e = c/10 
+\end{cases} 
+\]
+	
 
 \subsubsection{Campo elettrico}
+Preso un campo elettrico costante diretto lungo $\hat{x}$, le uniche componenti non nulle del tensore elettromagnetico sono
+\[ F_{01} = - F_{10} = _1 \]
+che trasformano per boost lungo la medesima direzione nel seguente modo:
+\[ F'_{01} = \Lambda^1_1\Lambda^0_0 F{01} + \Lambda^0_1\Lambda^1_0 F_{10} = \gamma^2(1-\beta^2)E_1 = E_1 \]
+restando quindi invariati.
+Una particella carica risulta quindi uniformemente accelerata, secondo l'equazione di Lorentz.
+
 
 
 
@@ -112,7 +128,8 @@ da cui infine
 \subsubsection{Quadripotenziale}
 Considerando la gauge in cui le componenti spaziali di $\tilde{A}^\mu$ sono nulle (in quanto il campo magnetico prodotto da una particella ferma \`e nullo), $\tilde{A}^0$ puo' essere ricavato, a meno di costanti, considerando che la sua derivata \`e il campo elettrico, che sar\`a un vettore (D-1)-dimensionale. Per il teorema di Gauss,
 \[ \int_\Sigma \vec{\tilde{E}}\cdot\vec{\Sigma} = \frac{\rho}{\epsilon_0} = \int_V \vec{\nabla}\cdot\vec{\tilde{E}} \de V \propto \int\de\Omega \int \frac{r^{D-2}}{r^{n+1}} \de r \]
-dove $\de\Omega$ \`e l'elemento di volume (D-2)-dimensionale. Siccome la dipendenza da r deve cancellarsi \( E_i = e\frac{\Gamma(\frac{D-1}{2})}{2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-2}} \), quindi
+dove $\de\Omega$ \`e l'elemento di volume (D-2)-dimensionale. Siccome la dipendenza da r deve cancellarsi i
+\( E_i = e\frac{\Gamma(\frac{D-1}{2})}{2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-2}} \), quindi
 \[ \tilde{A} = (-e\frac{\Gamma(\frac{D-1}{2})}{(D-1)2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-3}},\vec{0}) \]
 \subsubsection{Tensore elettromagnetico}
 Le componenti non nulle del tensore $F_{\mu\nu}$ sono le $F_{i0}=-F_{0i}=E_i$.
@@ -140,7 +157,7 @@ Il cambio di coordinate \`e
 \]
 dove gli $E_i$ sono i campi trasformati di coordinate, valutati nelle nuove coordinate. 
 
-Un boost porta a 
+Un boost di $-v$ porta a  (\( \beta = -v/c\))
 \[ x^{\pm} \rightarrow \gamma(1\mp\beta) x^{\pm} \]
 pertanto al boost corrisponde, in queste coordinate, 
 \[ \Lambda =
@@ -152,7 +169,7 @@ pertanto al boost corrisponde, in queste coordinate,
 \end{pmatrix} 
 \]
 e
-\[ F_{\mu\nu} \rightarrow 
+\[ F_{\mu\nu} \rightarrow F'_{\mu\nu} =
 \begin{pmatrix} 
 	0                             &  -E_1                & \gamma(1-\beta) E_2/\sqrt{2} & \cdots \\
 	E_1                           &  0                   & \gamma(1+\beta) E_2/\sqrt{2} & \cdots \\      
@@ -163,7 +180,9 @@ e
 
 \subsubsection{Limite di alte velocit\`a}
 Il limite
-\[ \lim_{\gamma\rightarrow\infty} \frac{\gamma}{[\gamma^2a^2+b^2]^{\frac{D-1}{2}}} = N_D \frac{\delta(a)}{b^{D-2}} \]
+\begin{equation} \label{eq:limND}
+	\lim_{\gamma\rightarrow\infty} \frac{\gamma}{[\gamma^2a^2+b^2]^{\frac{D-1}{2}}} = N_D \frac{\delta(a)}{b^{D-2}} 
+\end{equation}
 si giustifica osservando che per \( a\neq0\) tende a 0, mentre per \( a=0\) tende a $\infty$, cos\`i come fa la $\delta$ di Dirac.
 Scrivendo
 \[ \frac{1}{(\frac{\gamma^2a^2}{b^2} +1)^{\frac{D-1}{2}}} = \frac{1}{\Gamma({\frac{D-1}{2}})} 
@@ -177,6 +196,21 @@ A questo punto, usando \( \int \de a \; \delta(a) = 1 \),
 \[ \lim_{\gamma\rightarrow\infty} \frac{\gamma}{b^{D-1}} \frac{\Gamma({\frac{D-1}{2}}-\frac{1}{2})}{\Gamma({\frac{D-1}{2}})} \frac{\sqrt{\pi}b}{\gamma} = \frac{N_D}{b^{D-2}} \]
 Quindi
 \[ N_D = \sqrt{\pi} \frac{\Gamma({\frac{D-1}{2}}-\frac{1}{2})}{\Gamma({\frac{D-1}{2}})} \]
+
+Si considera ora che il raggio trasformato \`e
+\[ r = \sqrt{ (\frac{x_+ - x_-}{\sqrt{2}})^2 + \vec{x}_\perp^2 } \rightarrow 
+	r' = \sqrt{ \frac{\gamma^2}{2} (\frac{(1-\beta)x_+ - (1+\beta)x_-}{\sqrt{2}})^2 + \vec{x}_\perp^2 } \]
+pertanto le componenti $F'_{+i}$  per \( i\neq1 \) divengono
+\[ F'_{+i} = \frac{\gamma(1-\beta)}{\sqrt{2}}  e\frac{\Gamma(\frac{D-1}{2})}{2\pi^{\frac{D-1}{2}}\epsilon_0} \frac{1}{r^{D-1}} \hat{r}_i 
+	= \frac{\gamma(1-\beta)}{\sqrt{2}}  e\frac{\Gamma(\frac{D-1}{2})}{2\pi^{\frac{D-1}{2}}\epsilon_0} 
+	\frac{1}
+	  {(\frac{\gamma^2}{2} 	(\frac{(1-\beta)x_+ - (1+\beta)x_-}{\sqrt{2}})^2 + \vec{x}_\perp^2)^{\frac{D-1}{2}}} \hat{r}_i \]
+dove si tiene conto che per \(v\rightarrow c \Rightarrow \beta \rightarrow -1\) le componenti $F_{-i}$ si annullano.
+Nel limite, 
+\[ F'_{+i} \rightarrow \frac{(1-\beta)}{2}  e\frac{\Gamma(\frac{D-1}{2})}{2\pi^{\frac{D-1}{2}}\epsilon_0}
+	N_D \frac{\delta(x_+)}{x_\perp^{D-2}} \]
+
+ 
 
 
 

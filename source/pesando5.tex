@@ -6,7 +6,7 @@ Si verifica immediatamente che
 \[ V^\mu_a = (\delta^\mu_a - \frac{1}{2} h^\mu_a) \]
 pertanto si pu\`o usare la formula
 \[ \omega_{abc} = V^\mu_a V^\nu_b \partial_\mu V^c_\nu - [cab] + [bca] \]
-che, considerando di secondo ordine termini del tipo $(\partial h)h$,  \todo porta al primo ordine a 
+che, considerando di secondo ordine termini del tipo $(\partial h)h$, porta al primo ordine a 
 \[ \omega_{abc} = \frac{1}{2} [ \partial{[b} h_{c]a} - [abc] + [cab] \]
 \[ \omega_{ab} = \frac{1}{2} \partial_{[b} h_{a]c} V^c \]
 Siccome si trascurano termini del tipo $(\partial h)(\partial h)$,
@@ -27,8 +27,31 @@ diventa
 da cui il tensore di Einstein \`e immediatamente
 \[ G_{\mu\nu} = -\frac{1}{2} \partial^2 \bar{h}_{\mu\nu} \]
 
-\todo\todo
+\subsubsection{Gauge "di Lorenz"}
+Presa una variazione
+\[ x'^\mu = x^\mu +\epsilon^\mu(x) \;\;\;\rightarrow \;\;\; \dx'^\mu = \dx^\mu + \partial_\nu \epsilon^\mu \dx^\nu \]
+e considerando che la metrica deve restare invariata
+\[ g_{\mu\nu}(x)\dx^\mu\dx^\nu = g'_{\mu\nu}(x')\dx'^\mu\dx'^\nu \]
+Il primo membro \`e semplicemente \( \eta_{\mu\nu} \dx^\mu\dx^\nu + h_{\mu\nu} \dx^\mu\dx^\nu \), mentre il secondo pu\`o essere espanso al primo ordine come
+\[ (g'_{\mu\nu}(x)+\partial_\rho g'_{\mu\nu}(x) \epsilon^\rho)  \dx'^\mu\dx'^\nu = (\eta_{\mu\nu} + h'_{\mu\nu}(x) + \partial_\rho h'_{\mu\nu} \epsilon^\rho) \dx'^\mu\dx'^\nu \]
+Quindi uguagliando le due metriche (trascurando i termini $h\epsilon$ o $\partial h\epsilon$)
+\[ h_{\mu\nu} \dx^\mu\dx^\nu = \eta_{\mu\nu} \partial_\rho \epsilon^\mu \dx^\rho \dx^\nu + 
+                               \eta_{\mu\nu} \partial_\rho \epsilon^\nu \dx^\mu \dx^\rho + 
+			       h'_{\mu\nu}(x) \dx^\mu\dx^\nu \]
+da cui
+\[ h'_{\mu\nu} = h_{\mu\nu} -  \partial_\mu \epsilon_\nu - \partial_\nu \epsilon^\mu \;\;\;;\;\;\;
+	\partial^\mu h'_{\mu\nu} = \partial^\mu h_{\mu\nu} - \partial^2 \epsilon_\nu - \partial_\mu \partial_\nu \epsilon^\mu \;\;\;;\;\;\;
+	h' = h - 2\partial^\mu \epsilon_\mu \]
+e imponendo la gauge
+\[ \partial^\mu \bar{h}_{\mu\nu} - \partial^2\epsilon_\nu =0 \]
 
+Per il potenziale Elettromagnetico, invece, 
+\[ A'_\mu = A_\mu + \partial_\mu \epsilon \]
+e nella gauge di Lorenz
+\[ \partial^\mu A_\mu - \partial^2 \epsilon = 0 \]
+
+
+\subsubsection{Equazioni di Einstein}
 In definitiva l'equazione di Einstein diventa
 \[ \frac{8\pi G}{c^4} T_{\mu\nu} = G_{\mu\nu} = -\frac{1}{2} \partial^2 \bar{h}_{\mu\nu} \]
 \begin{equation} \label{eq:einst_lin}
@@ -68,12 +91,18 @@ nelle condizioni
 \[ u^\mu = (1,\vec{0}) \;\;\; ; \;\;\; |p| << c^2\rho \;\;\; ; \;\;\; \rho = \rho(\vec{y}) \]
 Se la materia \`e confinata in un raggio $|\vec{y}_M|$ e il campo viene valutato a distanze molto maggiori di questo raggio, si pu\`o sviluppare
 \[ \frac{1}{|\vec{x}-\vec{y}|} \sim \frac{1}{|\vec{x}|} \]
-Il tensore energia-impulso si riduce, nelle condizioni date, a 
-\[ T_{00} = c^2\rho \;\;\; ; \;\;\; T_{ii} = p \]
+Il tensore energia-impulso si riduce, nelle condizioni date, a
+\[ T_{00} = c^2\rho \;\;\; ; \;\;\; T_{ii} = p  \;\;\; ; \;\;\; T = -T_{00} +3 T_{ii} \sim -T_{00} \]
 per cui
-\[ \bar{h}_{00} (x^0,\vec{x}) = \frac{2G}{c^2 |\vec{x}|} \int \de^3y\rho(\vec{y}) = \frac{2GM}{c^2 r} \]
-\todo perche' T\_ii??
-\todo molta materia
+\[ h_{00} = \bar{h}_{00} + \frac{1}{2} \eta_{00} h = \frac{4G}{c^4|\vec{x}|} \int \de^3y (c^2\rho - \frac{1}{2}c^2\rho) = \frac{2GM}{c^2|\vec{x}|} \]
+\[ h_{ii} = \bar{h}_{ii} + \frac{1}{2} \eta_{ii} h = \frac{4G}{c^4|\vec{x}|} \int \de^3y (p + \frac{1}{2}c^2\rho) \sim \frac{2GM}{c^2|\vec{x}|} \]
+
+quindi la metrica diventa
+\[ \de s^2 = -(1-\frac{2GM}{c^2r})c^2\de t^2 + (1+\frac{2GM}{c^2r})(\de \vec{x})^2 \]
+da cui si vede che, perch\'e resti valido il limite di campo debole, dev'essere
+\[ 2GM << c^2r \;\;\;\rightarrow \;\;\; M<<\frac{c^2R}{2G} \]
+
+
 
 
 \subsubsection{Centro di massa nell'origine}
