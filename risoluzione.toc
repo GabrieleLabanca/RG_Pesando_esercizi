@@ -17,17 +17,17 @@
 \contentsline {subsection}{\numberline {2.2}Rotazioni}{8}{subsection.2.2}
 \contentsline {section}{\numberline {3}Foglio 3}{9}{section.3}
 \contentsline {subsection}{\numberline {3.1}Metrica bidimensionale}{9}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Traiettoria circolare}{14}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Traiettoria circolare}{15}{subsubsection.3.1.1}
 \contentsline {section}{\numberline {4}Foglio 4}{15}{section.4}
 \contentsline {subsection}{\numberline {4.1}Osservatori in Minkowsky}{15}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Metrica di Rindler}{15}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Schwartzschild per osservatori in moto}{15}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Osservatori in moto}{16}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}Metrica di Aichelburg-Sexl}{17}{subsubsection.4.3.2}
-\contentsline {section}{\numberline {5}Foglio 5}{17}{section.5}
-\contentsline {subsubsection}{\numberline {5.0.1}Campo debole}{17}{subsubsection.5.0.1}
-\contentsline {subsubsection}{\numberline {5.0.2}Gauge "di Lorenz"}{18}{subsubsection.5.0.2}
-\contentsline {subsubsection}{\numberline {5.0.3}Equazioni di Einstein}{19}{subsubsection.5.0.3}
-\contentsline {subsubsection}{\numberline {5.0.4}Funzione di Green}{19}{subsubsection.5.0.4}
-\contentsline {subsubsection}{\numberline {5.0.5}Polvere}{20}{subsubsection.5.0.5}
+\contentsline {subsection}{\numberline {4.2}Metrica di Rindler}{16}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Schwartzschild per osservatori in moto}{16}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Osservatori in moto}{17}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Metrica di Aichelburg-Sexl}{18}{subsubsection.4.3.2}
+\contentsline {section}{\numberline {5}Foglio 5}{18}{section.5}
+\contentsline {subsubsection}{\numberline {5.0.1}Campo debole}{18}{subsubsection.5.0.1}
+\contentsline {subsubsection}{\numberline {5.0.2}Gauge "di Lorenz"}{19}{subsubsection.5.0.2}
+\contentsline {subsubsection}{\numberline {5.0.3}Equazioni di Einstein}{20}{subsubsection.5.0.3}
+\contentsline {subsubsection}{\numberline {5.0.4}Funzione di Green}{20}{subsubsection.5.0.4}
+\contentsline {subsubsection}{\numberline {5.0.5}Polvere}{21}{subsubsection.5.0.5}
 \contentsline {subsubsection}{\numberline {5.0.6}Centro di massa nell'origine}{21}{subsubsection.5.0.6}

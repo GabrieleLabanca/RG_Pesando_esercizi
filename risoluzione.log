@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.1.19)  12 APR 2017 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.1.19)  12 APR 2017 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -719,30 +719,62 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 58.
 
-[3] [4] [5] [6]) (./source/pesando2.tex [7]) (./source/pesando3.tex [8]
-[9] [10] [11] <images/foglio3_neg_neg.png, id=249, 1009.7725pt x 629.35126pt>
+[3] [4] [5] [6]
+
+Package caption Warning: \label without proper reference on input line 221.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `figure:campoxt' on page 7 undefined on input line 213
+.
+
+
+Package caption Warning: \label without proper reference on input line 227.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `figure:campoxy' on page 7 undefined on input line 213
+.
+
+<images/foglio1_xt.jpg, id=219, 2006.49625pt x 2067.725pt>
+File: images/foglio1_xt.jpg Graphic file (type jpg)
+
+<use images/foglio1_xt.jpg>
+Package pdftex.def Info: images/foglio1_xt.jpg used on input line 219.
+(pdftex.def)             Requested size: 127.91907pt x 131.81967pt.
+
+<images/foglio1_xy.jpg, id=220, 2120.92375pt x 2321.67375pt>
+File: images/foglio1_xy.jpg Graphic file (type jpg)
+
+<use images/foglio1_xy.jpg>
+Package pdftex.def Info: images/foglio1_xy.jpg used on input line 225.
+(pdftex.def)             Requested size: 127.91907pt x 140.00293pt.
+) (./source/pesando2.tex [7 <./images/foglio1_xt.jpg>] [8 <./images/foglio1_xy.
+jpg>]) (./source/pesando3.tex [9] [10] [11] [12]
+<images/foglio3_neg_neg.png, id=259, 1009.7725pt x 629.35126pt>
 File: images/foglio3_neg_neg.png Graphic file (type png)
 
 <use images/foglio3_neg_neg.png>
 Package pdftex.def Info: images/foglio3_neg_neg.png used on input line 189.
-(pdftex.def)             Requested size: 426.39256pt x 265.75659pt.
+(pdftex.def)             Requested size: 127.91907pt x 79.72505pt.
 
-<images/foglio3_pos_neg.png, id=251, 1009.7725pt x 629.35126pt>
+<images/foglio3_pos_neg.png, id=261, 1009.7725pt x 629.35126pt>
 File: images/foglio3_pos_neg.png Graphic file (type png)
 
 <use images/foglio3_pos_neg.png>
 Package pdftex.def Info: images/foglio3_pos_neg.png used on input line 195.
-(pdftex.def)             Requested size: 426.39256pt x 265.75659pt.
+(pdftex.def)             Requested size: 127.91907pt x 79.72505pt.
 
-<images/foglio3_pos_pos.png, id=252, 1009.7725pt x 629.35126pt>
+<images/foglio3_pos_pos.png, id=262, 1009.7725pt x 629.35126pt>
 File: images/foglio3_pos_pos.png Graphic file (type png)
 
 <use images/foglio3_pos_pos.png>
 Package pdftex.def Info: images/foglio3_pos_pos.png used on input line 201.
-(pdftex.def)             Requested size: 426.39256pt x 265.75659pt.
- [12] [13 <./images/foglio3_neg_neg.png> <./images/foglio3_pos_neg.png>]) (./so
-urce/pesando4.tex [14 <./images/foglio3_pos_pos.png>] [15]
-Overfull \hbox (3.11176pt too wide) detected at line 67
+(pdftex.def)             Requested size: 127.91907pt x 79.72505pt.
+ [13] [14 <./images/foglio3_neg_neg.png> <./images/foglio3_pos_neg.png> <./imag
+es/foglio3_pos_pos.png>])
+(./source/pesando4.tex [15] [16]
+Overfull \hbox (3.11176pt too wide) detected at line 69
 \OMS/cmsy/m/n/10 !    \OML/cmm/m/it/10 ^^M[][]\OT1/cmr/m/n/10 d\OML/cmm/m/it/10
  U[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^M[][]\OT1/cmr/m/n/10 d\OML/cmm/m/it/1
 0 V[] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 d\OML/cmm/m/it/10 U\OT1/cmr/m/n/10 d
@@ -752,12 +784,12 @@ n/10 d\OML/cmm/m/it/10 V[] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 d\OML/cmm/m/it/
 10 U\OT1/cmr/m/n/10 d\OML/cmm/m/it/10 V\OT1/cmr/m/n/10 )
  []
 
-[16]) (./source/pesando5.tex
+[17]) (./source/pesando5.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 1.
 
-[17] [18]
+[18]
 
 Package caption Warning: \label without proper reference on input line 69.
 See the caption package documentation for explanation.
@@ -765,16 +797,16 @@ See the caption package documentation for explanation.
 
 LaTeX Warning: Reference `figure:green' on page 19 undefined on input line 62.
 
-<images/foglio5_circuito.jpg, id=294, 2457.18pt x 3276.24pt>
+[19] <images/foglio5_circuito.jpg, id=305, 2457.18pt x 3276.24pt>
 File: images/foglio5_circuito.jpg Graphic file (type jpg)
 
 <use images/foglio5_circuito.jpg>
 Package pdftex.def Info: images/foglio5_circuito.jpg used on input line 67.
 (pdftex.def)             Requested size: 2457.17403pt x 3276.23206pt.
- [19 <./images/foglio5_circuito.jpg>] [20])
+ [20 <./images/foglio5_circuito.jpg>] [21])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
 
-[21]
+[22]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
  (./risoluzione.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
@@ -788,10 +820,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 8026 strings out of 493013
- 116591 string characters out of 6139317
- 224637 words of memory out of 5000000
- 11407 multiletter control sequences out of 15000+600000
+ 8041 strings out of 493013
+ 116898 string characters out of 6139317
+ 224817 words of memory out of 5000000
+ 11417 multiletter control sequences out of 15000+600000
  5930 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,9n,39p,813b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -807,10 +839,10 @@ pk> </home/gabriele/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk>
 xmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </usr/share/texmf-dist/font
 s/pk/ljfour/public/cm/dpi600/cmbx10.pk> </home/gabriele/.texlive/texmf-var/font
 s/pk/ljfour/public/cm/cmbx12.720pk>
-Output written on risoluzione.pdf (21 pages, 1927159 bytes).
+Output written on risoluzione.pdf (22 pages, 3069015 bytes).
 PDF statistics:
- 793 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 500000)
- 285 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 804 PDF objects out of 1000 (max. 8388607)
+ 349 compressed objects within 4 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 295 words of extra memory for PDF output out of 10000 (max. 10000000)
 

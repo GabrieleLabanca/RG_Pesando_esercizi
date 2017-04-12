@@ -115,12 +115,13 @@ e quindi
 \begin{equation} \label{eq:commut}
 	\partial_0\rho(\vec{y}) = 0 \Rightarrow \partial_0T^{00} = 0 \Rightarrow \int \de^3y T^{00} (v_iy_j + y_iv_j) =0 
 \end{equation}
-Dove si \`e trascurato il termine di bordo in quanto \todo
+Dove si \`e trascurato il termine di bordo in quanto all'infuori del raggio $|\vec{y}_M|$ la densit\`a si annulla.
 
 Si sviluppa in multipoli
 \[ \frac{1}{|\vec{x}-\vec{y}|} \sim \frac{1}{|\vec{x}|} + y^i \frac{x_i}{|\vec{x}|^3} + \mathcal{O}(r^{-5}) \]
 da cui
 \[ \bar{h}_{00}(x^0,\vec{x}) = \frac{2GM}{c^2 r} + \mathcal{O}(r^{-5}) \]
+\[ \bar{h}_{ii}(x^0,\vec{x}) = \frac{2GM}{c^2 r} + \mathcal{O}(r^{-5}) \]
 usando la condizione di massa centrata nell'origine, per cui \( \int \de^3y\rho(\vec{y})y_i = 0\); i termini $T_{ij}$ si trascurano, essendo di ordine $T_{00}/c^2$; infine
 \[ \bar{h}_{0i}(x^0,\vec{x}) \sim \frac{4G}{c^3} \int \de^3y 
 	\left[ 
@@ -130,9 +131,8 @@ usando la condizione di massa centrata nell'origine, per cui \( \int \de^3y\rho(
 Il primo termine si annulla: la condizione di centro di massa fermo implica infatti \( \int \de^3y\rho(\vec{y})v_i = 0\). Per quanto riguarda il secondo, grazie a \ref{eq:commut}, si verifica che
 \[ \frac{1}{2} \int \de^3y \rho (v_iy_j - y_iv_j) = \int \de^3y \rho v_iy_j \]
 pertanto
-\[ \bar{h}_{0i}(x^0,\vec{x}) \sim -\frac{2Gx^j}{c^3|\vec{x}|} \int \de^3y \rho(\vec{y}) (v_iy_j - v_jy_i) + \mathcal{O}(r^{-5})  \]
+\[ \bar{h}_{0i}(x^0,\vec{x}) = -\frac{2Gx^j}{c^3|\vec{x}|} \int \de^3y \rho(\vec{y}) (v_iy_j - v_jy_i) + \mathcal{O}(r^{-5})  \]
 Per cui la metrica diventa, usando \( J_{ij} = \int \de^3y \rho(|\vec{y}|) (v_iy_j - v_jy_i) \),
 \[ \de s^2 = -(1 - \frac{2GM}{c^2 r} ) c^2 \de t^2 + (1+\frac{2GM}{c^2 r} ) (\de\vec{x})^2 + \frac{4G}{c^3r^3}J_{ij}\de x^i c \de t + \mathcal{O}(r^-5) \]
-\todo perch\`e h00 = hii? 
-\todo trascinamento
 
+L'effetto di trascinamento, cio\`e quello per cui lo spazio-tempo \`e deformato dalla rotazione del corpo massivo, si vede dal termine con $J_{ij}$, termine che si annulla se il momento angolare \`e nullo, cio\`e se il corpo non ruota rispetto all'infinito.
